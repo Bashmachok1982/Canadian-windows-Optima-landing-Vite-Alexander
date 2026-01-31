@@ -4,49 +4,628 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/Canadian-windows-Optima-landing-Vite-Alexander/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    <title>Optima</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;900&family=Poppins:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+      integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <script type="module" crossorigin src="/Canadian-windows-Optima-landing-Vite-Alexander/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/Canadian-windows-Optima-landing-Vite-Alexander/assets/index-C9Z8tvtb.css">
+    <link rel="modulepreload" crossorigin href="/Canadian-windows-Optima-landing-Vite-Alexander/assets/vendor-BbZn6H4r.js">
+    <link rel="stylesheet" crossorigin href="/Canadian-windows-Optima-landing-Vite-Alexander/assets/vendor-B0a9OMnn.css">
+    <link rel="stylesheet" crossorigin href="/Canadian-windows-Optima-landing-Vite-Alexander/assets/index-2I-uq2nB.css">
   </head>
   <body>
     <header class="header">
-  <div class="container">
-    <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="img/sprite.svg#logo"></use>
-        </svg>
-      </a>
+  <div class="container header-container">
+    <!-- LOGO -->
+    <a href="/" class="logo">
+      <img
+        src="data:image/webp;base64,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"
+        alt="windows and doors"
+        width="150"
+        height="47"
+      />
+    </a>
+
+    <!-- NAV (desktop only) -->
+    <nav class="nav desktop-nav">
       <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
-        </li>
+        <li><a href="#Why">Why replace</a></li>
+        <li><a href="#advantage">Our Advantage</a></li>
+        <li><a href="#technologies">Technologies</a></li>
+        <li><a href="#contacts">Contacts</a></li>
       </ul>
     </nav>
+
+    <!-- ACTIONS -->
+    <div class="header-actions">
+      <!-- PHONE (мобильный + планшет: только иконка, без номера) -->
+      <a href="tel:6479522191" class="phone">
+        <svg class="phone-icon" width="32" height="32" aria-hidden="true">
+          <use href="/Canadian-windows-Optima-landing-Vite-Alexander/assets/sprite-DSK2_Ypr.svg#icon-canada"></use>
+        </svg>
+        <!-- Номер скрыт везде (по твоему требованию) -->
+        <span class="phone-text">(647) 952-2191</span>
+      </a>
+
+      <!-- CALL ME (появляется на планшете) -->
+      <button class="call-btn">
+        <svg class="call-icon" width="18" height="18" aria-hidden="true">
+          <use href="/Canadian-windows-Optima-landing-Vite-Alexander/assets/sprite-DSK2_Ypr.svg#icon-Phone"></use>
+        </svg>
+        <span>Call me</span>
+      </button>
+
+      <!-- BURGER -->
+      <button class="burger-btn" aria-label="Open menu">
+        <svg
+          class="burger-icon"
+          width="32"
+          height="32"
+          viewBox="0 0 32 32"
+          aria-hidden="true"
+        >
+          <path
+            class="part-1"
+            d="M9.856 7.296c-2.88 2.24-5.376 4.544-5.568 5.184-0.256 0.576-0.448 4.032-0.448 7.616 0 7.104 0.704 8.704 3.712 8.704 1.856 0 1.792-1.792 0-2.048-1.408-0.192-1.472-0.512-1.664-6.784-0.192-7.424-0.512-6.784 6.656-12.352 2.688-2.048 3.712-2.496 4.224-1.984 1.088 1.088 2.432 0.96 2.432-0.192 0-0.96-1.856-2.24-3.328-2.24-0.448 0-3.2 1.856-6.016 4.096z"
+          />
+          <path
+            class="part-2"
+            d="M21.76 8.832c0 0.32 1.024 1.408 2.24 2.56l2.304 1.984-0.384 13.184-7.36 0.32c-9.536 0.384-9.472 1.536 0.064 1.792 9.6 0.256 9.536 0.256 9.536-9.024v-6.976l-2.176-2.176c-1.984-1.984-4.224-2.88-4.224-1.664z"
+          />
+          <path
+            class="part-3 green"
+            d="M9.6 14.4c0 0.768 1.152 0.96 6.4 0.96s6.4-0.192 6.4-0.96c0-0.768-1.152-0.96-6.4-0.96s-6.4 0.192-6.4 0.96z"
+          />
+          <path
+            class="part-4 green"
+            d="M9.6 18.24c0 0.768 1.152 0.96 6.4 0.96s6.4-0.192 6.4-0.96c0-0.768-1.152-0.96-6.4-0.96s-6.4 0.192-6.4 0.96z"
+          />
+          <path
+            class="part-5"
+            d="M10.048 21.504c-1.216 1.216 0.064 1.536 6.016 1.536 4.864 0 6.4-0.192 6.208-0.832-0.32-0.832-11.392-1.472-12.224-0.704z"
+          />
+        </svg>
+      </button>
+    </div>
   </div>
 </header>
 
 
-    <main></main>
+    <main>
+      <section class="hero">
+  <div class="container hero-container">
+    <h1 class="hero-title">
+      Modern,
+      <span>Energy Star certified</span>
+      windows and doors
+    </h1>
+    <p class="hero-text">
+      Upgrade your home’s energy efficiency backed by a lifetime warranty.
+    </p>
 
-    <footer class="footer">
-  <div class="container">
-    <p class="footer-desc">
-      Made with ✨ by
-      <a
-        class="footer-link"
-        href="https://goit.global/ua/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT team
-      </a>
+    <a href="#" class="hero-location">
+      <svg width="24" height="24" aria-hidden="true">
+        <use href="/Canadian-windows-Optima-landing-Vite-Alexander/assets/sprite-DSK2_Ypr.svg#icon-Geo"></use>
+      </svg>
+      Our service area
+    </a>
+  </div>
+</section>
+
+      <section class="benefits" id="Why">
+  <div class="container benefits-container">
+    <h1 class="benefits-title">Benefits of working <span>with us</span></h1>
+    <ul class="benefits-list">
+      <li class="benefits-list-item">
+        <img
+          src="/Canadian-windows-Optima-landing-Vite-Alexander/assets/benefits-1-BA4M317m.webp"
+          alt="good fittings"
+          class="benefits-img"
+          width="125px"
+          height="142px"
+        />
+        <h2 class="benefits-subtitle">Get back up to $250 per window</h2>
+        <p class="Benefits-text">
+          We carry ENERGY STAR® 2021 Most Efficient certified Windows and Doors
+          that qualify for the maximum amount redeemable under the Canada
+          Greener Homes Grant
+        </p>
+      </li>
+      <li class="benefits-list-item">
+        <img
+          src="/Canadian-windows-Optima-landing-Vite-Alexander/assets/benefits-2-CUpGxdbj.webp"
+          alt="savings piggy bank"
+          class="benefits-img"
+          width="166px"
+          height="131px"
+        />
+        <h2 class="benefits-subtitle">Financing Available</h2>
+        <p class="Benefits-text">
+          We offer a few fast, flexible, and easy ways to pay for your window
+          replacement project. Payment deferral for 3, 6, or 12 months is
+          available. Payments starting at just $39 per month.
+        </p>
+      </li>
+      <li class="benefits-list-item">
+        <img
+          src="/Canadian-windows-Optima-landing-Vite-Alexander/assets/benefits-3-DtcdJ3q8.webp"
+          alt="high-quality window"
+          class="benefits-img"
+          width="91px"
+          height="118px"
+        />
+        <h2 class="benefits-subtitle">Lifetime warranty</h2>
+        <p class="Benefits-text">
+          We are confident in the durability of our windows and doors! Any
+          components that fail for any reason, will be promptly replaced or
+          repaired.
+        </p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+      <section class="canada" id="canada">
+  <div class="container canada-container">
+    <h2 class="canada-title">CANADA GREENER HOMES GRANT</h2>
+
+    <p class="canada-text">
+      Optima Windows and Doors is an approved installer for The Greener Homes
+      Grant. With our new Energy Star 2021 certified windows and doors, you can
+      forget about window drafts, heat loss, and mold.
     </p>
   </div>
+
+  <!-- декоративные листья -->
+  <img
+    src="/Canadian-windows-Optima-landing-Vite-Alexander/assets/leaf-1-1x-CE2iFFSB.webp"
+    srcset="/Canadian-windows-Optima-landing-Vite-Alexander/assets/leaf-1-1x-CE2iFFSB.webp 1x, /Canadian-windows-Optima-landing-Vite-Alexander/assets/leaf-1-2x-BUUbetxF.webp 2x"
+    class="leaf leaf-1"
+    alt=""
+    aria-hidden="true"
+  />
+
+  <img
+    src="/Canadian-windows-Optima-landing-Vite-Alexander/assets/leaf-2-1x-BUJLRz_d.webp"
+    srcset="/Canadian-windows-Optima-landing-Vite-Alexander/assets/leaf-2-1x-BUJLRz_d.webp 1x, /Canadian-windows-Optima-landing-Vite-Alexander/assets/leaf-2-2x-BMWRTpki.webp 2x"
+    class="leaf leaf-2"
+    alt=""
+    aria-hidden="true"
+  />
+
+  <img
+    src="/Canadian-windows-Optima-landing-Vite-Alexander/assets/leaf-3-1x-Btgt5q6_.webp"
+    srcset="/Canadian-windows-Optima-landing-Vite-Alexander/assets/leaf-3-1x-Btgt5q6_.webp 1x, /Canadian-windows-Optima-landing-Vite-Alexander/assets/leaf-3-2x-DsgktY3_.webp 2x"
+    class="leaf leaf-3"
+    alt=""
+    aria-hidden="true"
+  />
+
+  <img
+    src="/Canadian-windows-Optima-landing-Vite-Alexander/assets/leaf-4-1x-BDa6COye.webp"
+    srcset="/Canadian-windows-Optima-landing-Vite-Alexander/assets/leaf-4-1x-BDa6COye.webp 1x, /Canadian-windows-Optima-landing-Vite-Alexander/assets/leaf-4-2x-CmJIOyK8.webp 2x"
+    class="leaf leaf-4"
+    alt=""
+    aria-hidden="true"
+  />
+</section>
+
+      <section class="advantage" id="advantage">
+  <div class="container advantage-container">
+    <h2 class="advantage-title">OUR ADVANTAGE</h2>
+
+    <p class="advantage-text">
+      Patented window technology protects your home in any weather and is
+      guaranteed and with a Lifetime Warranty.
+    </p>
+
+    <div class="advantage-gallery">
+      <!-- LEFT -->
+      <div
+        class="gallery-item gallery-item--left gallery-item--with-badge"
+        data-aos="fade-down"
+        data-aos-delay="900"
+        data-aos-duration="900"
+      >
+        <img
+          src="/Canadian-windows-Optima-landing-Vite-Alexander/assets/advantage-1-2x-D0CFA4eV.webp"
+          alt="Window replacement"
+        />
+
+        <div class="badge">
+          <svg class="badge-bg" viewBox="0 0 290 177" aria-hidden="true">
+            <use href="/Canadian-windows-Optima-landing-Vite-Alexander/assets/sprite-DSK2_Ypr.svg#highlight-badge" />
+          </svg>
+
+          <span class="badge-text">
+            whole home<br />
+            replacement<br />
+            ≈ 8 hours
+          </span>
+        </div>
+      </div>
+
+      <!-- CENTER -->
+      <div
+        class="gallery-item gallery-item--center"
+        data-aos="fade-up"
+        data-aos-delay="0"
+        data-aos-duration="700"
+      >
+        <img
+          src="/Canadian-windows-Optima-landing-Vite-Alexander/assets/advantage-2-2x-DT46ypPA.webp"
+          alt="Installation process"
+        />
+      </div>
+
+      <!-- RIGHT -->
+      <div
+        class="gallery-item gallery-item--right"
+        data-aos="fade-up"
+        data-aos-delay="950"
+        data-aos-duration="800"
+      >
+        <img src="/Canadian-windows-Optima-landing-Vite-Alexander/assets/advantage-3-2x-CP0Ryxlt.webp" alt="Finished window" />
+      </div>
+    </div>
+
+    <p class="advantage-bottom-text">
+      The new generation of window glass and construction make window
+      replacement an essential update for many households. This clever and
+      affordable upgrade increases home value, plus
+      <span
+        >replacing your windows and doors with New Energy Efficient models make
+        a HUGE improvement to your home’s comfort</span
+      >
+      by eliminating drafts, leeks, window cloudiness and mold. Manufactured in
+      here at home in Toronto, Ontario, Optima‘s Whole-Home Window Replacement
+      installs in under 8 hours*!
+    </p>
+  </div>
+</section>
+
+      <section class="reasons">
+  <div class="container reasons-container">
+    <h2 class="reasons-title">When and why replace windows and doors?</h2>
+
+    <p class="reasons-text">
+      If you are experiencing one or more of the following problems, it's time
+      to replace or repair your windows to reduce your energy costs
+    </p>
+
+    <div class="reasons-gallery">
+      <!-- 1 -->
+      <div
+        class="reasons-card"
+        data-aos="fade-down"
+        data-aos-delay="200"
+        data-aos-duration="900"
+      >
+        <img src="/Canadian-windows-Optima-landing-Vite-Alexander/assets/reasons-1-2x-DJsembe-.webp" alt="Cloudiness and mold" />
+
+        <div class="reason-icon">
+          <svg>
+            <use href="/Canadian-windows-Optima-landing-Vite-Alexander/assets/sprite-DSK2_Ypr.svg#icon-drop"></use>
+          </svg>
+        </div>
+
+        <p class="reason-text">Cloudiness, mold</p>
+      </div>
+
+      <!-- 2 -->
+      <div
+        class="reasons-card"
+        data-aos="fade-up"
+        data-aos-delay="0"
+        data-aos-duration="700"
+      >
+        <img src="/Canadian-windows-Optima-landing-Vite-Alexander/assets/reasons-2-2x-DNZdJD0m.webp" alt="High heat cost" />
+
+        <div class="reason-icon">
+          <svg>
+            <use href="/Canadian-windows-Optima-landing-Vite-Alexander/assets/sprite-DSK2_Ypr.svg#icon-flame"></use>
+          </svg>
+        </div>
+
+        <p class="reason-text">High heat cost</p>
+      </div>
+
+      <!-- 3 -->
+      <div
+        class="reasons-card"
+        data-aos="fade-down"
+        data-aos-delay="300"
+        data-aos-duration="1000"
+      >
+        <img src="/Canadian-windows-Optima-landing-Vite-Alexander/assets/reasons-3-2x-R002NQ0u.webp" alt="Warping frames" />
+
+        <div class="reason-icon">
+          <svg>
+            <use href="/Canadian-windows-Optima-landing-Vite-Alexander/assets/sprite-DSK2_Ypr.svg#icon-lightning"></use>
+          </svg>
+        </div>
+
+        <p class="reason-text">Warping, rotting frames</p>
+      </div>
+
+      <!-- 4 -->
+      <div
+        class="reasons-card"
+        data-aos="fade-up"
+        data-aos-delay="150"
+        data-aos-duration="850"
+      >
+        <img src="/Canadian-windows-Optima-landing-Vite-Alexander/assets/reasons-4-2x-D4FZTD4q.webp" alt="Peeling paint" />
+
+        <div class="reason-icon">
+          <svg>
+            <use href="/Canadian-windows-Optima-landing-Vite-Alexander/assets/sprite-DSK2_Ypr.svg#icon-lightning"></use>
+          </svg>
+        </div>
+
+        <p class="reason-text">Peeling paint</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="technology" id="technologies">
+  <div class="container technology-container">
+    <h1 class="technology-title">SUPERIOR TECHNOLOGY</h1>
+
+    <p class="technology-text">
+      Replacing windows and doors with new energy-efficient models will save up
+      to 50% on heating and cooling costs, and make your home feel more
+      comfortable
+    </p>
+
+    <div class="technology-gallery">
+      <!-- Карточка 01 -->
+      <div class="technology-card" data-aos="fade-up" data-aos-delay="200">
+        <img
+          src="/Canadian-windows-Optima-landing-Vite-Alexander/assets/technology-1-2x-SHdbGJ1L.webp"
+          alt="Low-E Glass illustration"
+          width="192"
+          height="122"
+          loading="lazy"
+        />
+        <h2 class="technology-subtitle">Low-E Glass</h2>
+        <p class="technology-card-text">
+          Reflects solar rays in the summer and retains infrared rays in the
+          winter, helping to heat your home. Optima Windows & Doors currently
+          uses a 5th generation Low-E product.
+        </p>
+        <p class="card-number">01</p>
+      </div>
+
+      <!-- Карточка 02 -->
+      <div class="technology-card" data-aos="fade-up" data-aos-delay="400">
+        <img
+          src="/Canadian-windows-Optima-landing-Vite-Alexander/assets/technology-2-2x-CvKicg5q.webp"
+          alt="Premium Vinyl illustration"
+          width="185"
+          height="128"
+          loading="lazy"
+        />
+        <h2 class="technology-subtitle">Premium Vinyl</h2>
+        <p class="technology-card-text">
+          We build heavy-duty windows using premium, surgical-grade vinyl with
+          no fillers or re-grind. This guarantees durability without warping,
+          fading, or loss of performance.
+        </p>
+        <p class="card-number">02</p>
+      </div>
+
+      <!-- Карточка 03 -->
+      <div class="technology-card" data-aos="fade-up" data-aos-delay="600">
+        <img
+          src="/Canadian-windows-Optima-landing-Vite-Alexander/assets/technology-3-2x-Cy98CXJa.webp"
+          alt="Advanced Spacer System illustration"
+          width="214"
+          height="145"
+          loading="lazy"
+        />
+        <h2 class="technology-subtitle">Advanced Spacer System</h2>
+        <p class="technology-card-text">
+          Any use of aluminum in window construction results in heat loss. To
+          avoid this, Optima does not use any type of metal in its spacer
+          systems.
+        </p>
+        <p class="card-number">03</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <section class="customer">
+  <div class="container customer-container">
+    <h1 class="customer-title">customer reviews</h1>
+
+    <ul class="customer-list">
+      <li class="customer-list-item">
+        <p class="quotes outline">“</p>
+        <p class="reviews-text">
+          “We heard about Optima through our neighbor across the park. They had
+          a sign up, we saw the work that was done, and we were really happy
+          with it and that’s when we called. Meeting Chris, the salesperson, and
+          getting all the information, - we were really satisfied with what he
+          was able to present to us. We love the style of the windows, we love
+          the color and we love how quiet it is inside. And the heat… we’ve
+          noticed that we don’t need to have our furnace turned up high to
+          maintain the house temperature.“
+        </p>
+        <p class="author-text">Donna and Trevor, Milton</p>
+      </li>
+
+      <li class="customer-list-item">
+        <p class="quotes filled">“</p>
+        <p class="reviews-text">
+          "I received 3 quotes and awarded Optima Windows to replace all windows
+          in our home. They were competitively priced and accommodating to ALL
+          our custom requests."
+        </p>
+        <p class="author-text">David Nicholson, Oakville</p>
+      </li>
+
+      <li class="customer-list-item">
+        <p class="quotes outline">“</p>
+        <p class="reviews-text">
+          “We have received several quotes and spent a lot of time entertaining
+          different company representatives. We found that Optima has the
+          highest quality windows for the best value. After the products were
+          installed we couldn’t be any happier. If you are in the market for
+          high-quality windows and doors, don’t look any further than Optima
+          windows and doors. My son is replacing his windows with them now.”
+        </p>
+        <p class="author-text">Ruth, Toronto</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+    </main>
+
+    <footer class="footer">
+  <div class="container footer-container">
+    <!-- ================= CONTENT ================= -->
+    <div class="footer-content">
+      <!-- LEFT -->
+      <div class="footer-left">
+        <h2 class="footer-title">
+          LEAVE THE APPLICATION,<br />
+          <span>WE WILL CALL YOU</span>
+        </h2>
+
+        <p class="footer-desc">
+          Patented window technology protects your home in any weather and is
+          guaranteed.
+        </p>
+
+        <form class="footer-form">
+          <div class="form-group">
+            <label class="footer-label">Your phone</label>
+            <input
+              type="tel"
+              placeholder="Enter the phone number"
+              class="footer-input"
+            />
+          </div>
+
+          <div class="form-group">
+            <label class="footer-label">Your name</label>
+            <input
+              type="text"
+              placeholder="Enter your name"
+              class="footer-input"
+            />
+          </div>
+        </form>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="footer-right">
+        <div class="hand-phone">
+          <img
+            src="/Canadian-windows-Optima-landing-Vite-Alexander/assets/hand-with-phone-1x-Cvme1oBK.webp"
+            srcset="/Canadian-windows-Optima-landing-Vite-Alexander/assets/hand-with-phone-2x-MD46qEwk.webp 2x"
+            alt="Hand holding phone"
+            class="hand-img"
+          />
+
+          <!-- PHONE SCREEN -->
+          <div class="phone-screen">
+            <svg class="leav-icon">
+              <use href="/Canadian-windows-Optima-landing-Vite-Alexander/assets/sprite-DSK2_Ypr.svg#icon-leav"></use>
+            </svg>
+
+            <div class="phone-optima">Optima</div>
+            <div class="phone-number">(647) 952-2191</div>
+
+            <button class="phone-btn">CALL ME</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-trigger">
+      <span>Follow us</span>
+    </div>
+
+    <!-- ================= SOCIAL BLOCKS ================= -->
+    <div class="footer-social-blocks">
+      <!-- LEFT -->
+      <div class="social-block instagram">
+        <svg class="social-icon">
+          <use href="/Canadian-windows-Optima-landing-Vite-Alexander/assets/sprite-DSK2_Ypr.svg#icon-instagram"></use>
+        </svg>
+        <p class="social-followers">1k followers</p>
+      </div>
+
+      <!-- CENTER -->
+      <div class="social-block facebook is-main">
+        <h2 class="title-social">Follow us</h2>
+
+        <svg class="social-icon">
+          <use href="/Canadian-windows-Optima-landing-Vite-Alexander/assets/sprite-DSK2_Ypr.svg#icon-facebook"></use>
+        </svg>
+
+        <p class="social-followers">1k followers</p>
+
+        <p class="footer-bottom">
+          © 2021 Optima windows and doors.<br />
+          All rights reserved.<br />
+          (647) 952-2191
+        </p>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="social-block youtube">
+        <svg class="social-icon">
+          <use href="/Canadian-windows-Optima-landing-Vite-Alexander/assets/sprite-DSK2_Ypr.svg#icon-youTube"></use>
+        </svg>
+        <p class="social-followers">1k followers</p>
+      </div>
+    </div>
+  </div>
 </footer>
+
+
+    <div class="mobile-menu is-hidden" id="mobile-menu">
+  <div class="mobile-menu-inner">
+    <button class="mobile-close">
+      <svg class="mobile-close-btn" width="8" height="8" aria-hidden="true">
+        <use href="/Canadian-windows-Optima-landing-Vite-Alexander/assets/sprite-DSK2_Ypr.svg#icon-close-btn"></use>
+      </svg>
+    </button>
+
+    <nav class="mobile-nav">
+      <ul>
+        <li><a href="#Why">Why replace</a></li>
+        <li><a href="#advantage">Our Advantage</a></li>
+        <li><a href="#technologies">Technologies</a></li>
+        <li><a href="#contacts">Contacts</a></li>
+      </ul>
+    </nav>
+
+    <a href="tel:6479522191" class="mobile-phone"> (647) 952-2191 </a>
+
+    <button class="btn mobile-call">Call me</button>
+  </div>
+</div>
 
 
   </body>
