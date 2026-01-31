@@ -1,44 +1,179 @@
+/* ===== HEADER / MOBILE ===== */
+
 .header {
-  padding: 20px 0;
+  width: 100%;
+  /*background: #bbd784;*/
 }
-.nav {
+
+.header-container {
+  max-width: 1812px;
+  margin: 0 auto;
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  padding: 26px 16px;
 }
-.nav-logo {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+
+/* NAV hidden на мобильном */
+.desktop-nav {
+  display: none;
 }
-.nav-list {
+
+/* ACTIONS */
+.header-actions {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  gap: 40px;
+  gap: 24px;
 }
-.nav-link {
-  position: relative;
-  display: block;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  transition: 200ms ease-in;
+
+/* PHONE — базовые стили */
+.phone {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #36162e; /* цвет текста номера */
 }
-.nav-link:hover,
-.nav-link:focus {
-  color: #747bff;
+
+/* По умолчанию (мобильный): показываем только иконку */
+.phone-text {
+  display: none;
 }
-.nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%) translateY(100%);
-  width: 110%;
-  height: 4px;
-  border-radius: 4px;
-  transform-origin: center;
-  animation: stretch 400ms cubic-bezier(0.68, -0.55, 0.27, 1.55) 200ms both;
+
+/* CALL ME hidden на мобильном */
+.call-btn {
+  display: none;
 }
-.nav-link.active::after {
-  background: #747bff;
+
+/* BURGER */
+.burger-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: transform 0.25s ease;
+}
+
+.burger-icon {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.25s ease;
+}
+
+/* Раскраска иконки бургера (по твоему обновлённому порядку) */
+.burger-icon .part-1,
+.burger-icon .part-2,
+.burger-icon .part-4 {
+  fill: #320b29; /* purple */
+}
+
+.burger-icon .part-3,
+.burger-icon .part-5 {
+  fill: #9acb3c; /* green */
+}
+
+/* Hover / Focus: весь бургер целиком (scale + цветной эффект) */
+.burger-btn:hover,
+.burger-btn:focus {
+  transform: scale(1.1);
+}
+
+.burger-btn:hover .burger-icon,
+.burger-btn:focus .burger-icon {
+  transform: scale(1.1);
+}
+
+.burger-btn:hover .part-1,
+.burger-btn:hover .part-2,
+.burger-btn:hover .part-4,
+.burger-btn:focus .part-1,
+.burger-btn:focus .part-2,
+.burger-btn:focus .part-4 {
+  fill: #ff6d3f; /* акцентный оранжевый на hover (или #36162e для потемнения) */
+  transition: fill 0.25s ease;
+}
+
+.burger-btn:hover .part-3,
+.burger-btn:hover .part-5,
+.burger-btn:focus .part-3,
+.burger-btn:focus .part-5 {
+  fill: #9acb3c; /* зелёный остаётся или можно #320b29 */
+  transition: fill 0.25s ease;
+}
+.phone-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* ===== TABLET ≥768 ===== */
+@media (min-width: 768px) {
+  /* call-btn НЕ показываем на планшете */
+  .call-btn {
+    display: none;
+  }
+
+  .call-icon {
+    fill: #ff6d3f;
+  }
+
+  .phone {
+    gap: 12px;
+  }
+  .phone-text {
+    display: none;
+  }
+}
+
+/* ===== DESKTOP ≥1175 ===== */
+@media (min-width: 1175px) {
+  .desktop-nav {
+    display: block;
+  }
+
+  .nav-list {
+    display: flex;
+    gap: 40px;
+  }
+
+  .nav-list a {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 1.7;
+    color: #36162e;
+    text-decoration: none;
+  }
+
+  .burger-btn {
+    display: none;
+  }
+
+  /* Только иконка телефона скрывается на десктопе (номер уже none) */
+  .phone-icon {
+    display: none;
+  }
+  .phone-text {
+    display: inline; /* ← вот ключевой момент */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.7;
+    color: #36162e;
+  }
+  .phone {
+    gap: 0; /* убираем gap, т.к. иконки нет */
+  }
+  /* call-btn ПОКАЗЫВАЕМ ТОЛЬКО НА ДЕСКТОПЕ */
+  .call-btn {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: #ff6d3f;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
 }

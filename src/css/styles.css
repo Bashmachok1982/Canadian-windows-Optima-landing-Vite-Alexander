@@ -11,5 +11,14 @@
 
 /* Sections style */
 @import url('./header.css');
+@import url('./hero.css');
+@import url('./benefits.css');
+@import url('./canada.css');
+@import url('./advantage.css');
+@import url('./reasons.css');
+@import url('./technology.css');
+@import url('./customer.css');
 
 @import url('./footer.css');
+
+@import url('./mobile-menu.css');

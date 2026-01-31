@@ -1,0 +1,106 @@
+/* ===== MOBILE MENU ===== */
+
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  background: #9acb3c; /* зелёный как в хедере */
+  padding: 24px 20px 40px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+  z-index: 999;
+}
+
+/* состояние открыто */
+.mobile-menu.is-open {
+  transform: translateX(0);
+}
+
+/* декоративная рамка */
+.mobile-menu::before {
+  content: '';
+  position: absolute;
+  inset: 12px;
+  border: 2px solid rgba(54, 22, 46, 0.25);
+  pointer-events: none;
+}
+
+/* ===== INNER ===== */
+
+.mobile-menu-inner {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* ===== CLOSE ===== */
+
+.mobile-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.mobile-close-btn {
+  width: 16px;
+  height: 16px;
+  fill: #36162e;
+}
+
+/* ===== NAV ===== */
+
+.mobile-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 80px 0 40px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.mobile-nav a {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.3;
+  color: #36162e;
+  text-decoration: none;
+}
+
+/* ===== PHONE ===== */
+
+.mobile-phone {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 1.5;
+  color: #36162e;
+  text-decoration: none;
+  margin-bottom: 24px;
+}
+
+/* ===== BUTTON ===== */
+
+.mobile-call {
+  width: 100%;
+  height: 56px;
+
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+
+  color: #ffffff;
+  background: #ff6d3f;
+  border: none;
+  cursor: pointer;
+}

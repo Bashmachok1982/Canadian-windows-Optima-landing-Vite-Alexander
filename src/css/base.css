@@ -1,32 +1,25 @@
 :root {
-  /* font-family: Inter, Avenir, Helvetica, Arial, sans-serif; */
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  font-weight: 400;
+  /* ===== Fonts ===== */
+  --font-main: 'Inter', sans-serif;
+  --font-accent: 'Montserrat', sans-serif;
 
-  color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
+  /* ===== Colors ===== */
+  --color-text-main: #1e1e1e;
+  --color-text-light: #ffffff;
+  --color-text-muted: #6b6b6b;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
+  /* Brand / Accent */
+  --color-green-main: #9acb3c; /* фон Канады */
+  --color-green-dark: #320b29; /* футер */
+  --color-purple-main: #6a4bc3; /* фиолетовый акцент (иконки, бургер) */
 
-body {
-  display: flex;
-  flex-direction: column;
-  min-width: 100vw;
-  min-height: 100vh;
-  margin: 0;
-}
+  /* Backgrounds */
+  --color-bg-main: #ffffff;
+  --color-bg-section: #f5f7f2;
 
-main {
-  flex-grow: 1;
-}
-main:has(.back-link) {
-  text-align: center;
+  /* Borders */
+  --color-border-light: rgba(0, 0, 0, 0.1);
+
+  /* Animation */
+  --transition-main: 250ms ease-in-out;
 }
