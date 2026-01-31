@@ -7,6 +7,8 @@
   overflow: hidden;
   padding-top: 100px;
   height: 600px;
+  padding-bottom: 40px; /* = высота триггера */
+  z-index: 1;
 }
 
 .footer-container {
@@ -22,6 +24,10 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+}
+/* ================= RIGHT ================= */
+.footer-right {
+  align-self: flex-end;
 }
 
 /* ================= LEFT ================= */
@@ -113,7 +119,8 @@
 .hand-phone {
   position: relative;
   width: 420px;
-  margin-bottom: -20px; /* прижимаем к низу */
+  /*margin-bottom: -25px; /* прижимаем к низу */
+  margin-bottom: -30px;
 }
 
 .hand-img {
@@ -129,7 +136,7 @@
   width: 155px;
   height: 330px;
   background: #36162e;
-  border-radius: 20px;
+  border-radius: 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -139,8 +146,8 @@
 .leav-icon {
   width: 32px;
   height: 32px;
-  margin-bottom: 40px;
-  fill: #ff6d3f;
+  margin-bottom: 30px;
+  fill: #fff;
 }
 
 .phone-optima {
@@ -156,8 +163,9 @@
 /* ================= SOCIAL TRIGGER ================= */
 
 .footer-trigger {
-  position: absolute;
-  bottom: -80px;
+  /*position: absolute;*/
+  /*bottom: -80px;*/
+  bottom: 0;
   left: 0px;
   width: 100%;
   height: 40px;
@@ -166,7 +174,7 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  z-index: 5;
+  z-index: 4;
 }
 
 .footer-trigger span {
@@ -179,24 +187,11 @@
 
 /* ================= SOCIAL BLOCKS ================= */
 
-.footer-social-blocks {
-  position: absolute;
-  bottom: -40px;
-  left: 0;
-  width: 100%;
-  display: flex;
-  gap: 16px;
-  justify-content: center;
-  transform: translateY(100%);
-  transition: transform 0.5s ease;
-  pointer-events: none;
-}
-
-.footer-trigger:hover + .footer-social-blocks,
+/*.footer-trigger:hover + .footer-social-blocks,
 .footer-social-blocks:hover {
   transform: translateY(0);
   pointer-events: auto;
-}
+} */
 
 .social-block {
   width: 388px;
@@ -211,7 +206,7 @@
 .social-icon {
   width: 48px;
   height: 48px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 /* BRAND COLORS */
@@ -232,4 +227,186 @@
   font-family: 'Poppins', sans-serif;
   font-size: 18px;
   opacity: 0.8;
+}
+.title-social {
+  font-weight: 900;
+  font-size: 52px;
+  line-height: 1.3;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: 'Big Shoulders Display', sans-serif;
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+.footer-bottom {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+  color: #9d8e9a;
+  opacity: 0.5;
+  font-family: 'Poppins', sans-serif;
+}
+.social-followers {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #9d8e9a;
+  font-family: 'Poppins', sans-serif;
+}
+
+.social-titile {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 1.3;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.main {
+  margin-bottom: 56px;
+}
+.social-block .social-icon {
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.social-block:hover .social-icon {
+  transform: scale(1.15);
+  opacity: 1;
+}
+.footer-social-blocks {
+  position: absolute;
+  bottom: -80px; /* прижимаем к низу футера */
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  z-index: 3;
+  overflow: visible; /* если не хочешь менять футер целиком */
+}
+
+.social-slot {
+  position: relative;
+  width: 388px;
+  z-index: 10; /* ← повыше */
+}
+
+/* каждый триггер — локальный */
+.social-slot .footer-trigger {
+  height: 40px;
+  background: #2a0f24;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 5;
+  width: 388px;
+}
+
+/* блок скрыт */
+.social-slot .social-block {
+  position: absolute;
+  left: 0;
+
+  width: 388px;
+  height: 532px;
+  background: #320b29;
+
+  /* ❗ ФИЗИЧЕСКИ ПРЯЧЕМ НИЖЕ ФУТЕРА */
+  bottom: -532px;
+
+  transition: bottom 0.45s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* /* показывается ТОЛЬКО свой */
+.social-slot:hover .social-block {
+  pointer-events: auto;
+  background: #320b29;
+  bottom: 40px; /* ровно под коричневым триггером */
+}
+/*Для отправки формы*/
+.phone-success {
+  position: absolute;
+  inset: 0;
+  background: #36162e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.success-check {
+  width: 70px;
+  height: 70px;
+  border-radius: 84px;
+  background: #ff6d3f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 35px;
+  box-shadow:
+    0 1px 3px rgba(255, 109, 63, 0.15),
+    0 3px 7px rgba(255, 109, 63, 0.22),
+    0 8px 17px rgba(255, 109, 63, 0.28),
+    0 27px 56px rgba(255, 109, 63, 0.43),
+    inset 0 12px 28px rgba(255, 221, 102, 0.45);
+}
+
+.success-text {
+  margin-top: 35px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.3;
+  text-align: center;
+  color: #fff;
+  max-width: 120px;
+}
+
+.hidden {
+  display: none;
+}
+/* Ошибки под полями */
+.input-error {
+  font-size: 14px;
+  color: #ff6d3f; /* или var(--text-error) */
+  margin-top: 4px;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Показываем ошибку только если поле invalid и не пустое (не placeholder) */
+.footer-input:user-invalid:not(:placeholder-shown) + .input-error {
+  display: block;
+  opacity: 1;
+}
+
+/* Красная рамка и фон при ошибке */
+.footer-input:user-invalid:not(:placeholder-shown) {
+  border: 1px solid #ff6d3f;
+  background: rgba(255, 109, 63, 0.08);
+}
+
+/* Отключаем стандартную подсказку браузера (чтобы показывалась только наша) */
+.footer-input {
+  /* ... твои стили ... */
+}
+
+/* Для лучшей совместимости с Safari и Firefox */
+.footer-input:invalid:not(:placeholder-shown) + .input-error {
+  display: block;
+  opacity: 1;
+}
+
+.footer-input:invalid:not(:placeholder-shown) {
+  border: 1px solid #ff6d3f;
+  background: rgba(255, 109, 63, 0.08);
 }
