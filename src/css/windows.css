@@ -1,0 +1,176 @@
+/* ===== WINDOWS SECTION ===== */
+
+.windows {
+  padding: 60px 0;
+}
+
+.windows-container {
+  max-width: 1175px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.windows-titile {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-weight: 900;
+  font-size: 42px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: #36162e;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.windows-desc {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 1.6;
+  color: #36162e;
+  text-align: center;
+  margin-bottom: 40px;
+  max-width: 900px;
+  /*  margin-left: auto;
+  margin-right: auto; */
+}
+
+.windows-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* 10px между карточками в ряду */
+  row-gap: 24px; /* 24px между рядами */
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.windows-list-item {
+  background: #fff;
+  opacity: 0.9;
+  padding: 35px 24px;
+  border-radius: 12px;
+  text-align: center;
+  flex-shrink: 0;
+  flex-grow: 0;
+  width: 220px; /* жёстко 220 px */
+  height: 310px; /* жёстко 310 px */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  border: 1px solid #36162e;
+}
+
+.windows-img {
+  width: 176px; /* жёстко 176 px */
+  height: 171px; /* жёстко 171 px */
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.windows-text {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 1.2;
+  color: #36162e;
+  transition: color 0.3s ease;
+}
+.windows-list-item:hover .windows-text {
+  color: #ff6d3f;
+}
+/*Изменения стилей для библиотеки simple-lightbox*/
+/* Цвет полоски внизу */
+.sl-caption {
+  background-color: #36162e !important; /* твой фиолетовый */
+  color: #fff !important; /* белый текст */
+  padding: 16px 20px !important; /* больше высоты и отступов */
+  font-size: 16px !important;
+  line-height: 1.4 !important;
+  bottom: auto !important; /* отключаем fixed bottom */
+  position: relative !important; /* делаем относительным, чтобы margin работал */
+}
+
+/* ============================================= */
+/* ПЛАНШЕТ ≥768px — 3 в ряд + 1 ниже             */
+/* ============================================= */
+
+@media (min-width: 768px) {
+  .windows-titile {
+    font-size: 56px;
+    text-align: center;
+  }
+
+  .windows-desc {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .windows-list {
+    gap: 10px;
+    row-gap: 24px;
+  }
+
+  .windows-list-item {
+    width: 220px;
+    height: 310px;
+  }
+}
+
+/* ============================================= */
+/* ДЕСКТОП ≥1175px — 2 ряда по 5 карточек        */
+/* ============================================= */
+
+@media (min-width: 1175px) {
+  .windows-titile {
+    font-size: 68px;
+  }
+
+  .windows-desc {
+    font-size: 26px;
+  }
+
+  .windows-list {
+    gap: 10px;
+    row-gap: 24px;
+    justify-content: space-between;
+  }
+
+  .windows-list-item {
+    width: 220px;
+    height: 310px;
+  }
+
+  /* Вторая строка (6–10) — просто gap между рядами */
+  .windows-list-item:nth-child(n + 6) {
+    margin-top: 0;
+  }
+  .windows-titile {
+    text-align: start;
+  }
+  .windows-desc {
+    text-align: start;
+  }
+  .windows-list-item {
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(54, 22, 46, 0.08); /* лёгкая тень в покое */
+    cursor: pointer; /* курсор руки */
+  }
+
+  .windows-list-item:hover,
+  .windows-list-item:focus-visible {
+    transform: translateY(-8px); /* приподнимается */
+    /*box-shadow: 0 16px 40px rgba(54, 22, 46, 0.18); /* сильная тень */
+    box-shadow: 0 16px 40px rgba(255, 109, 63, 0.15);
+    /*opacity: 0.12; /* лёгкое усиление фона */
+    border-color: 4px solid #ff6d3f;
+  }
+
+  /* Для доступности — фокус клавиатурой */
+  .windows-list-item:focus-visible {
+    outline: none; /* убираем стандартный outline */
+    box-shadow: 0 0 0 3px rgba(255, 109, 63, 0.4); /* оранжевый контур */
+  }
+}
