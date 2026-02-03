@@ -1,0 +1,115 @@
+/* =========================
+   REVIEWS — BASE / MOBILE
+========================= */
+
+.reviews {
+  position: relative;
+  margin-top: -40px; /* налезаем на Canada (подправишь) */
+  z-index: 5;
+}
+
+.reviews-container {
+  max-width: 1175px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* CARD */
+
+.review-card {
+  background: #f7f7f7;
+  padding: 24px;
+  border-radius: 4px;
+}
+
+/* STARS */
+
+.review-stars {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.review-stars .star {
+  width: 20px;
+  height: 20px;
+  fill: #ff6d3f;
+}
+
+/* TEXT */
+
+.review-text {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #36162e;
+  margin-bottom: 16px;
+}
+
+/* FOOTER */
+
+.review-footer {
+  margin-top: auto;
+}
+
+.review-author {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #36162e;
+  margin-bottom: 4px;
+}
+
+.review-date {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #9d8e9a;
+}
+@media (min-width: 768px) {
+  .reviews {
+    margin-top: -100px;
+  }
+
+  .reviews-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .review-card {
+    width: 360px;
+    min-height: 420px;
+  }
+}
+@media (min-width: 1175px) {
+  .reviews {
+    margin-top: -100px;
+  }
+
+  .reviews-list {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .review-card {
+    width: 380px;
+    height: 438px; /* как у тебя */
+  }
+
+  .review-stars .star {
+    width: 24px;
+    height: 24px;
+  }
+}

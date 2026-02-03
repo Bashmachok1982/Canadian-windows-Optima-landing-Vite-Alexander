@@ -2,6 +2,7 @@ import './js/mobile-menu.js';
 import './js/technology.js';
 import './js/forma.js';
 import './js/simple-lightbox-init.js';
+import './js/beter-view.js';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
