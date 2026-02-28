@@ -1,0 +1,121 @@
+.geo-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(54, 22, 46, 0.55);
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.geo-backdrop:not(.hidden) {
+  opacity: 1;
+  visibility: visible;
+}
+
+.geo-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 480px;
+  background: #fff;
+  padding: 40px 24px 48px;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  max-height: 90vh;
+  overflow-y: auto;
+  z-index: 10000;
+}
+
+/* Декоративная рамка */
+.geo-modal::before {
+  content: '';
+  position: absolute;
+  inset: 12px;
+  border: 2px solid rgba(54, 22, 46, 0.2);
+  pointer-events: none;
+  border-radius: 10px;
+}
+
+/* Крестик */
+.geo-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.geo-close:hover {
+  opacity: 1;
+}
+
+.geo-close svg {
+  fill: #36162e;
+}
+
+/* Заголовок и текст */
+.geo-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.geo-header h3 {
+  font-weight: 500;
+  font-size: 20px;
+  color: #36162e;
+  margin: 0;
+}
+
+.geo-text {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #594057;
+  margin: 0;
+}
+
+/* Адаптив */
+@media (min-width: 768px) {
+  .geo-modal {
+    max-width: 540px;
+    padding: 48px 32px 56px;
+  }
+
+  .geo-header h3 {
+    font-size: 22px;
+  }
+
+  .geo-text {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1175px) {
+  .geo-modal {
+    max-width: 600px;
+    padding: 56px 40px 64px;
+  }
+
+  .geo-header h3 {
+    font-size: 24px;
+  }
+
+  .geo-text {
+    font-size: 17px;
+  }
+}
+
+.hidden {
+  display: none !important;
+}

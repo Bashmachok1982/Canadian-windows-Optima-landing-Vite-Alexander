@@ -1,7 +1,7 @@
 /* ===== BENEFITS SECTION ===== */
 
 .benefits {
-  padding: 100px 0 90px;
+  padding: 60px 0 60px;
 }
 
 .benefits-title {
@@ -136,7 +136,7 @@
 /* DESKTOP ≥1175px — 3 в ряд */
 @media (min-width: 1175px) {
   .benefits {
-    padding: 140px 0 110px;
+    padding: 60px 0 60px;
   }
 
   .benefits-title {

@@ -1,0 +1,234 @@
+<section class="estimate">
+  <div class="container estimate-container">
+    <!-- Окно 1 – Step 1 -->
+    <div class="estimate-window active" id="step1">
+      <!-- Прогресс-бар -->
+      <div class="progress-bar">
+        <span class="progress-text">STEP 1 OF 3</span>
+        <div class="progress-line">
+          <div class="progress-active"></div>
+          <div class="progress-inactive"></div>
+        </div>
+      </div>
+
+      <h2>Get a <span class="highlight">FREE</span> estimate</h2>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label class="input-label">Postal code</label>
+          <input type="text" placeholder="E.g., H0H 0H0" required />
+        </div>
+
+        <div class="form-group">
+          <label class="input-radio">How many windows & doors to replace</label>
+          <div class="radio-group">
+            <label class="radio-label">
+              <input type="radio" name="quantity" value="1-3" checked />
+              <span>1 – 3</span>
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="quantity" value="4-8" />
+              <span>4 – 8</span>
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="quantity" value="8+" />
+              <span>8+</span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <button class="next-btn" data-next="step2">NEXT STEP</button>
+
+      <!-- Бейджик -->
+      <div class="estimate-badge">
+        <svg class="badge-bg" viewBox="0 0 290 85">
+          <use href="./img/sprite.svg#icon-substrate"></use>
+        </svg>
+
+        <div class="badge-inner">
+          <p class="badge-desc"> No Obligation,</br> Zero Pressure </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Окно 2 – Step 2 -->
+<div class="estimate-window estimate-step2 " id="step2">
+  <!-- PROGRESS -->
+  <div class="step2-progress">
+    <span class="step2-progress-text">STEP 2 OF 3</span>
+
+    <div class="step2-progress-bar">
+      <span class="step2-progress-line"></span>
+
+      <div class="step2-progress-point done">
+        <svg class="step2-check">
+          <use href="./img/sprite.svg#icon-checked"></use>
+        </svg>
+        <span class="step2-label active">Free Estimate</span>
+      </div>
+
+      <div class="step2-progress-point">
+          <svg class="step2-check">
+          <use href="./img/sprite.svg#icon-checked"></use>
+        </svg>
+        <span class="step2-label">+15% OFF</span>
+      </div>
+
+      <div class="step2-progress-point">
+          <svg class="step2-check">
+          <use href="./img/sprite.svg#icon-checked"></use>
+        </svg>
+        <span class="step2-label">+10% OFF</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- QUESTION 1 -->
+  <h2 class="step2-title">
+    How old are your current windows and doors?
+  </h2>
+
+  <div class="step2-radio-group">
+    <label class="step2-radio-card">
+      <input type="radio" name="age" checked />
+      <span>Less than 5 years</span>
+    </label>
+
+    <label class="step2-radio-card">
+      <input type="radio" name="age" />
+      <span>5 to 10 years</span>
+    </label>
+
+    <label class="step2-radio-card">
+      <input type="radio" name="age" />
+      <span>Over 10 years old</span>
+    </label>
+  </div>
+
+  <!-- QUESTION 2 -->
+  <h3 class="step2-subtitle">
+    Are you looking to complete this project in the next 90 days?
+  </h3>
+
+  <div class="step2-radio-pills">
+    <label class="step2-pill active">
+      <input type="radio" name="timeline" checked />
+      <span>Yes</span>
+    </label>
+
+    <label class="step2-pill">
+      <input type="radio" name="timeline" />
+      <span>No</span>
+    </label>
+  </div>
+
+  <button class="next-btn" data-next="step3">
+    NEXT STEP
+  </button>
+</div>
+
+
+
+    <!-- Окно 3 – Step 3 -->
+  <div class="estimate-window estimate-step3 " id="step3">
+  <!-- PROGRESS -->
+  <div class="step3-progress">
+    <span class="step3-progress-text">STEP 3 OF 3</span>
+
+    <div class="step3-progress-bar">
+      <span class="step3-progress-line"></span>
+
+      <div class="step3-progress-point done">
+        <svg class="step3-check">
+          <use href="./img/sprite.svg#icon-checked"></use>
+        </svg>
+        <span class="step3-span active">Free Estimate</span>
+      </div>
+
+      <div class="step3-progress-point done">
+        <svg class="step3-check">
+          <use href="./img/sprite.svg#icon-checked"></use>
+        </svg>
+        <span class="step3-span active">+15% OFF</span>
+      </div>
+
+      <div class="step3-progress-point">
+        <svg class="step3-check">
+          <use href="./img/sprite.svg#icon-checked"></use>
+        </svg>
+        <span class="step3-span">+10% OFF</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- TITLE -->
+  <h2 class="step3-title">Who are we preparing this estimate for?</h2>
+
+  <!-- FORM -->
+  <div class="step3-form">
+    <div class="step3-group">
+      <label class="step3-label">Full Name</label>
+      <input
+        type="text"
+        placeholder="Full Name"
+        class="step3-input step3-input--accent"
+        required
+      />
+    </div>
+
+    <div class="step3-group">
+      <label class="step3-label">Email Address</label>
+      <input
+        type="email"
+        placeholder="Email Address"
+        class="step3-input step3-input--secondary"
+        required
+      />
+    </div>
+
+    <div class="step3-group">
+      <label class="step3-label">Phone Number</label>
+      <input
+        type="tel"
+        placeholder="Phone Number"
+        class="step3-input"
+        required
+      />
+    </div>
+  </div>
+
+  <!-- BRANDS -->
+  <img
+    src="./img/brends.webp"
+    alt="Trusted brands"
+    class="step3-brands"
+  />
+
+  <button class="next-btn">SEND</button>
+</div>
+
+
+    <!-- Окно 4 – Thank You -->
+    <div class="estimate-window thank-you hidden" id="thank-you">
+      <button class="close-btn" aria-label="Закрыть">
+        <svg width="24" height="24">
+          <use href="./img/sprite.svg#icon-close-btn"></use>
+        </svg>
+      </button>
+
+      <div class="step4-success-check">
+        <svg><use href="./img/sprite.svg#icon-check"></use></svg>
+      </div>
+
+      <h2 class="step4-title">Thank you for your request!</h2>
+      <p class="step4-desc">
+        One of our team members will contact you shortly to schedule your Free
+        Estimate and a 25% Discount.
+      </p>
+      <p class="step4-text">We will be calling you from this number:</p>
+      <p class="phone">(647) 576-2090</p>
+      <p class="note">...so please make sure you pick up.</p>
+    </div>
+  </div>
+</section>
