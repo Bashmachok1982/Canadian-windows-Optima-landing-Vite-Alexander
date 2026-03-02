@@ -43,6 +43,14 @@
   /*width: 100%;*/
   max-width: 380px; /* ← не шире 340px */
   margin: 0 auto; /* центрируем */
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+  cursor: pointer;
+}
+.benefits-list-item:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
 .benefits-img {

@@ -26,6 +26,15 @@
   background: #f7f7f7;
   padding: 24px;
   border-radius: 4px;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+  cursor: pointer;
+}
+.review-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  background: #ffffff;
 }
 
 /* STARS */

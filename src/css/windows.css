@@ -68,6 +68,13 @@
   height: 171px; /* жёстко 171 px */
   object-fit: contain;
   margin-bottom: 15px;
+  transition: transform 0.4s ease;
+}
+.windows-list-item:hover .windows-img {
+  transform: scale(1.08);
+}
+.windows-list-item:hover .windows-img {
+  transform: scale(1.05) rotate(-2deg);
 }
 
 .windows-text {

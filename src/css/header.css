@@ -2,10 +2,11 @@
 
 .header {
   width: 100%;
-  background: #bbd784;
+  /*  background: #bbd784; */
   position: sticky;
   top: 0;
   z-index: 100;
+  background: #9acb3c;
 }
 
 .header-container {
@@ -121,6 +122,11 @@ a:focus {
   line-height: 1.7;
   color: #36162e;
   text-decoration: none;
+  transition: transform 0.25s ease;
+}
+.nav-list a:hover,
+.nav-list a:focus {
+  transform: scale(1.2);
 }
 
 .nav-list a::after {
@@ -152,6 +158,45 @@ a:focus {
 .burger-btn:hover,
 .burger-btn:focus {
   transform: scale(1.1);
+}
+/* ===== LANGUAGE SWITCHER ===== */
+
+.lang-switcher {
+  display: flex;
+  gap: 8px;
+}
+
+.lang-btn {
+  background: none;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: #36162e; /* тот же цвет, что и ссылки */
+  cursor: pointer;
+  padding: 4px 6px;
+  transition:
+    transform 0.25s ease,
+    color 0.25s ease;
+}
+
+.lang-btn:hover,
+.lang-btn:focus {
+  transform: scale(1.1);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  color: #ff6d3f;
+}
+
+.lang-btn:focus {
+  outline: 2px solid #ff6d3f;
+  outline-offset: 3px;
+}
+
+/* Активный язык */
+.lang-btn.active {
+  color: #ff6d3f;
+  font-weight: 700;
 }
 
 /* ===== TABLET ≥768 ===== */

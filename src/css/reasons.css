@@ -51,6 +51,7 @@
   height: 370px;
   overflow: hidden;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .reasons-card img {
@@ -58,6 +59,36 @@
   height: 370px;
   object-fit: cover;
   display: block;
+  transition:
+    transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    filter 0.6s ease;
+}
+.reasons-card:hover img {
+  transform: scale(1.15);
+  filter: brightness(1.05);
+}
+.reasons-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.5s ease;
+}
+
+.reasons-card:hover::after {
+  background: rgba(0, 0, 0, 0.15);
+}
+.reason-icon,
+.reason-text {
+  transition: transform 0.4s ease;
+}
+
+.reasons-card:hover .reason-icon {
+  transform: translateY(-6px);
+}
+
+.reasons-card:hover .reason-text {
+  transform: translateY(-6px);
 }
 
 /* =========================
