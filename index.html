@@ -25,10 +25,11 @@
     <script type="module" crossorigin src="/Canadian-windows-Optima-landing-Vite-Alexander/index.js"></script>
     <link rel="modulepreload" crossorigin href="/Canadian-windows-Optima-landing-Vite-Alexander/assets/vendor-BNdPdaeU.js">
     <link rel="stylesheet" crossorigin href="/Canadian-windows-Optima-landing-Vite-Alexander/assets/vendor-pw4b4rky.css">
-    <link rel="stylesheet" crossorigin href="/Canadian-windows-Optima-landing-Vite-Alexander/assets/index-BAbfko7E.css">
+    <link rel="stylesheet" crossorigin href="/Canadian-windows-Optima-landing-Vite-Alexander/assets/index-D8Slyh1g.css">
   </head>
   <body>
-    <header class="header">
+    <!-- HEADER -->
+<header class="header">
   <div class="container header-container">
     <!-- LOGO -->
     <a href="/" class="logo">
@@ -40,36 +41,43 @@
       />
     </a>
 
-    <!-- NAV (desktop only) -->
+    <!-- NAV -->
     <nav class="nav desktop-nav">
       <ul class="nav-list">
-        <li><a href="#Why">Why replace</a></li>
-        <li><a href="#advantage">Our Advantage</a></li>
-        <li><a href="#technologies">Technologies</a></li>
-        <li><a href="#contacts">Contacts</a></li>
+        <li><a href="#Why" data-i18n="nav-why">Why replace</a></li>
+        <li>
+          <a href="#advantage" data-i18n="nav-advantage">Our Advantage</a>
+        </li>
+        <li>
+          <a href="#technologies" data-i18n="nav-technologies">Technologies</a>
+        </li>
+        <li><a href="#contacts" data-i18n="nav-contacts">Contacts</a></li>
       </ul>
     </nav>
 
     <!-- ACTIONS -->
     <div class="header-actions">
-      <!-- PHONE (мобильный + планшет: только иконка, без номера) -->
+      <!-- ПЕРЕКЛЮЧАТЕЛЬ ЯЗЫКОВ -->
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="ru">RU</button>
+        <button class="lang-btn" data-lang="ua">UA</button>
+      </div>
+
       <a href="tel:6479522191" class="phone">
         <svg class="phone-icon" width="32" height="32" aria-hidden="true">
           <use href="/Canadian-windows-Optima-landing-Vite-Alexander/assets/sprite-_W040JIe.svg#icon-canada"></use>
         </svg>
-        <!-- Номер скрыт везде (по твоему требованию) -->
         <span class="phone-text">(647) 952-2191</span>
       </a>
 
-      <!-- CALL ME (появляется на планшете) -->
       <button class="call-btn">
         <svg class="call-icon" width="18" height="18" aria-hidden="true">
           <use href="/Canadian-windows-Optima-landing-Vite-Alexander/assets/sprite-_W040JIe.svg#icon-Phone"></use>
         </svg>
-        <span>Call me</span>
+        <span data-i18n="header-call">Call me</span>
       </button>
 
-      <!-- BURGER -->
       <button class="burger-btn" aria-label="Open menu">
         <svg
           class="burger-icon"
@@ -106,22 +114,20 @@
 
 
     <main>
-      <section class="hero">
+      <!-- HERO -->
+<section class="hero">
   <div class="container hero-container">
-    <h1 class="hero-title">
-      Modern,
-      <span>Energy Star certified</span>
-      windows and doors
+    <h1 class="hero-title" data-i18n="hero-title">
+      Modern, <span>Energy Star certified</span> windows and doors
     </h1>
-    <p class="hero-text">
-      Upgrade your home’s energy efficiency backed by a lifetime warranty.
+    <p class="hero-text" data-i18n="hero-text">
+      Upgrade your home's energy efficiency backed by a lifetime warranty.
     </p>
-
     <a href="#" class="hero-location">
       <svg width="24" height="24" aria-hidden="true">
         <use href="/Canadian-windows-Optima-landing-Vite-Alexander/assets/sprite-_W040JIe.svg#icon-Geo"></use>
       </svg>
-      Our service area
+      <span data-i18n="hero-location">Our service area</span>
     </a>
   </div>
 </section>
@@ -130,25 +136,37 @@
   <div class="container estimate-container">
     <!-- Окно 1 – Step 1 -->
     <div class="estimate-window active" id="step1">
-      <!-- Прогресс-бар -->
       <div class="progress-bar">
-        <span class="progress-text">STEP 1 OF 3</span>
+        <span class="progress-text" data-i18n="estimate-step1"
+          >STEP 1 OF 3</span
+        >
         <div class="progress-line">
           <div class="progress-active"></div>
           <div class="progress-inactive"></div>
         </div>
       </div>
 
-      <h2>Get a <span class="highlight">FREE</span> estimate</h2>
+      <h2 data-i18n="estimate-title">
+        Get a <span class="highlight">FREE</span> estimate
+      </h2>
 
       <div class="form-row">
         <div class="form-group">
-          <label class="input-label">Postal code</label>
-          <input type="text" placeholder="E.g., H0H 0H0" required />
+          <label class="input-label" data-i18n="estimate-postal"
+            >Postal code</label
+          >
+          <input
+            type="text"
+            data-i18n-placeholder="estimate-postal-placeholder"
+            placeholder="E.g., H0H 0H0"
+            required
+          />
         </div>
 
         <div class="form-group">
-          <label class="input-radio">How many windows & doors to replace</label>
+          <label class="input-radio" data-i18n="estimate-quantity"
+            >How many windows & doors to replace</label
+          >
           <div class="radio-group">
             <label class="radio-label">
               <input type="radio" name="quantity" value="1-3" checked />
@@ -166,204 +184,198 @@
         </div>
       </div>
 
-      <button class="next-btn" data-next="step2">NEXT STEP</button>
+      <button class="next-btn" data-next="step2" data-i18n="estimate-next">
+        NEXT STEP
+      </button>
 
-      <!-- Бейджик -->
       <div class="estimate-badge">
         <svg class="badge-bg" viewBox="0 0 290 85">
           <use href="/Canadian-windows-Optima-landing-Vite-Alexander/assets/sprite-_W040JIe.svg#icon-substrate"></use>
         </svg>
-
         <div class="badge-inner">
-          <p class="badge-desc"> No Obligation,</br> Zero Pressure </p>
+          <p class="badge-desc" data-i18n="estimate-badge">
+            No Obligation, Zero Pressure
+          </p>
         </div>
       </div>
     </div>
 
     <!-- Окно 2 – Step 2 -->
-<div class="estimate-window estimate-step2 " id="step2">
-  <!-- PROGRESS -->
-  <div class="step2-progress">
-    <span class="step2-progress-text">STEP 2 OF 3</span>
-
-    <div class="step2-progress-bar">
-      <span class="step2-progress-line"></span>
-
-      <div class="step2-progress-point done">
-        <svg class="step2-check">
-          <use href="/Canadian-windows-Optima-landing-Vite-Alexander/assets/sprite-_W040JIe.svg#icon-checked"></use>
-        </svg>
-        <span class="step2-label active">Free Estimate</span>
+    <div class="estimate-window estimate-step2" id="step2">
+      <div class="step2-progress">
+        <span class="step2-progress-text" data-i18n="estimate-step2"
+          >STEP 2 OF 3</span
+        >
+        <div class="step2-progress-bar">
+          <span class="step2-progress-line"></span>
+          <div class="step2-progress-point done">
+            <svg class="step2-check">
+              <use href="/Canadian-windows-Optima-landing-Vite-Alexander/assets/sprite-_W040JIe.svg#icon-checked"></use>
+            </svg>
+            <span class="step2-label active">Free Estimate</span>
+          </div>
+          <div class="step2-progress-point">
+            <svg class="step2-check">
+              <use href="/Canadian-windows-Optima-landing-Vite-Alexander/assets/sprite-_W040JIe.svg#icon-checked"></use>
+            </svg>
+            <span class="step2-label">+15% OFF</span>
+          </div>
+          <div class="step2-progress-point">
+            <svg class="step2-check">
+              <use href="/Canadian-windows-Optima-landing-Vite-Alexander/assets/sprite-_W040JIe.svg#icon-checked"></use>
+            </svg>
+            <span class="step2-label">+10% OFF</span>
+          </div>
+        </div>
       </div>
 
-      <div class="step2-progress-point">
-          <svg class="step2-check">
-          <use href="/Canadian-windows-Optima-landing-Vite-Alexander/assets/sprite-_W040JIe.svg#icon-checked"></use>
-        </svg>
-        <span class="step2-label">+15% OFF</span>
+      <h2 class="step2-title" data-i18n="estimate-q1">
+        How old are your current windows and doors?
+      </h2>
+
+      <div class="step2-radio-group">
+        <label class="step2-radio-card">
+          <input type="radio" name="age" checked />
+          <span data-i18n="estimate-age1">Less than 5 years</span>
+        </label>
+        <label class="step2-radio-card">
+          <input type="radio" name="age" />
+          <span data-i18n="estimate-age2">5 to 10 years</span>
+        </label>
+        <label class="step2-radio-card">
+          <input type="radio" name="age" />
+          <span data-i18n="estimate-age3">Over 10 years old</span>
+        </label>
       </div>
 
-      <div class="step2-progress-point">
-          <svg class="step2-check">
-          <use href="/Canadian-windows-Optima-landing-Vite-Alexander/assets/sprite-_W040JIe.svg#icon-checked"></use>
-        </svg>
-        <span class="step2-label">+10% OFF</span>
+      <h3 class="step2-subtitle" data-i18n="estimate-q2">
+        Are you looking to complete this project in the next 90 days?
+      </h3>
+
+      <div class="step2-radio-pills">
+        <label class="step2-pill active">
+          <input type="radio" name="timeline" checked />
+          <span data-i18n="estimate-yes">Yes</span>
+        </label>
+        <label class="step2-pill">
+          <input type="radio" name="timeline" />
+          <span data-i18n="estimate-no">No</span>
+        </label>
       </div>
+
+      <button class="next-btn" data-next="step3" data-i18n="estimate-next">
+        NEXT STEP
+      </button>
     </div>
-  </div>
-
-  <!-- QUESTION 1 -->
-  <h2 class="step2-title">
-    How old are your current windows and doors?
-  </h2>
-
-  <div class="step2-radio-group">
-    <label class="step2-radio-card">
-      <input type="radio" name="age" checked />
-      <span>Less than 5 years</span>
-    </label>
-
-    <label class="step2-radio-card">
-      <input type="radio" name="age" />
-      <span>5 to 10 years</span>
-    </label>
-
-    <label class="step2-radio-card">
-      <input type="radio" name="age" />
-      <span>Over 10 years old</span>
-    </label>
-  </div>
-
-  <!-- QUESTION 2 -->
-  <h3 class="step2-subtitle">
-    Are you looking to complete this project in the next 90 days?
-  </h3>
-
-  <div class="step2-radio-pills">
-    <label class="step2-pill active">
-      <input type="radio" name="timeline" checked />
-      <span>Yes</span>
-    </label>
-
-    <label class="step2-pill">
-      <input type="radio" name="timeline" />
-      <span>No</span>
-    </label>
-  </div>
-
-  <button class="next-btn" data-next="step3">
-    NEXT STEP
-  </button>
-</div>
-
-
 
     <!-- Окно 3 – Step 3 -->
-  <div class="estimate-window estimate-step3 " id="step3">
-  <!-- PROGRESS -->
-  <div class="step3-progress">
-    <span class="step3-progress-text">STEP 3 OF 3</span>
-
-    <div class="step3-progress-bar">
-      <span class="step3-progress-line"></span>
-
-      <div class="step3-progress-point done">
-        <svg class="step3-check">
-          <use href="/Canadian-windows-Optima-landing-Vite-Alexander/assets/sprite-_W040JIe.svg#icon-checked"></use>
-        </svg>
-        <span class="step3-span active">Free Estimate</span>
+    <div class="estimate-window estimate-step3" id="step3">
+      <div class="step3-progress">
+        <span class="step3-progress-text" data-i18n="estimate-step3"
+          >STEP 3 OF 3</span
+        >
+        <div class="step3-progress-bar">
+          <span class="step3-progress-line"></span>
+          <div class="step3-progress-point done">
+            <svg class="step3-check">
+              <use href="/Canadian-windows-Optima-landing-Vite-Alexander/assets/sprite-_W040JIe.svg#icon-checked"></use>
+            </svg>
+            <span class="step3-span active">Free Estimate</span>
+          </div>
+          <div class="step3-progress-point done">
+            <svg class="step3-check">
+              <use href="/Canadian-windows-Optima-landing-Vite-Alexander/assets/sprite-_W040JIe.svg#icon-checked"></use>
+            </svg>
+            <span class="step3-span active">+15% OFF</span>
+          </div>
+          <div class="step3-progress-point">
+            <svg class="step3-check">
+              <use href="/Canadian-windows-Optima-landing-Vite-Alexander/assets/sprite-_W040JIe.svg#icon-checked"></use>
+            </svg>
+            <span class="step3-span">+10% OFF</span>
+          </div>
+        </div>
       </div>
 
-      <div class="step3-progress-point done">
-        <svg class="step3-check">
-          <use href="/Canadian-windows-Optima-landing-Vite-Alexander/assets/sprite-_W040JIe.svg#icon-checked"></use>
-        </svg>
-        <span class="step3-span active">+15% OFF</span>
+      <h2 class="step3-title" data-i18n="estimate-step3-title">
+        Who are we preparing this estimate for?
+      </h2>
+
+      <div class="step3-form">
+        <div class="step3-group">
+          <label class="step3-label" data-i18n="estimate-name">Full Name</label>
+          <input
+            type="text"
+            data-i18n-placeholder="estimate-name"
+            placeholder="Full Name"
+            class="step3-input step3-input--accent"
+            required
+          />
+        </div>
+        <div class="step3-group">
+          <label class="step3-label" data-i18n="estimate-email"
+            >Email Address</label
+          >
+          <input
+            type="email"
+            data-i18n-placeholder="estimate-email"
+            placeholder="Email Address"
+            class="step3-input step3-input--secondary"
+            required
+          />
+        </div>
+        <div class="step3-group">
+          <label class="step3-label" data-i18n="estimate-phone"
+            >Phone Number</label
+          >
+          <input
+            type="tel"
+            data-i18n-placeholder="estimate-phone"
+            placeholder="Phone Number"
+            class="step3-input"
+            required
+          />
+        </div>
       </div>
 
-      <div class="step3-progress-point">
-        <svg class="step3-check">
-          <use href="/Canadian-windows-Optima-landing-Vite-Alexander/assets/sprite-_W040JIe.svg#icon-checked"></use>
-        </svg>
-        <span class="step3-span">+10% OFF</span>
-      </div>
+      <img src="/Canadian-windows-Optima-landing-Vite-Alexander/assets/brends-CR2rmjCR.webp" alt="Trusted brands" class="step3-brands" />
+
+      <button class="next-btn" data-i18n="estimate-send">SEND</button>
     </div>
-  </div>
-
-  <!-- TITLE -->
-  <h2 class="step3-title">Who are we preparing this estimate for?</h2>
-
-  <!-- FORM -->
-  <div class="step3-form">
-    <div class="step3-group">
-      <label class="step3-label">Full Name</label>
-      <input
-        type="text"
-        placeholder="Full Name"
-        class="step3-input step3-input--accent"
-        required
-      />
-    </div>
-
-    <div class="step3-group">
-      <label class="step3-label">Email Address</label>
-      <input
-        type="email"
-        placeholder="Email Address"
-        class="step3-input step3-input--secondary"
-        required
-      />
-    </div>
-
-    <div class="step3-group">
-      <label class="step3-label">Phone Number</label>
-      <input
-        type="tel"
-        placeholder="Phone Number"
-        class="step3-input"
-        required
-      />
-    </div>
-  </div>
-
-  <!-- BRANDS -->
-  <img
-    src="/Canadian-windows-Optima-landing-Vite-Alexander/assets/brends-CR2rmjCR.webp"
-    alt="Trusted brands"
-    class="step3-brands"
-  />
-
-  <button class="next-btn">SEND</button>
-</div>
-
 
     <!-- Окно 4 – Thank You -->
     <div class="estimate-window thank-you hidden" id="thank-you">
-      <button class="close-btn" aria-label="Закрыть">
+      <button class="close-btn" aria-label="Close">
         <svg width="24" height="24">
           <use href="/Canadian-windows-Optima-landing-Vite-Alexander/assets/sprite-_W040JIe.svg#icon-close-btn"></use>
         </svg>
       </button>
-
       <div class="step4-success-check">
         <svg><use href="/Canadian-windows-Optima-landing-Vite-Alexander/assets/sprite-_W040JIe.svg#icon-check"></use></svg>
       </div>
-
-      <h2 class="step4-title">Thank you for your request!</h2>
-      <p class="step4-desc">
+      <h2 class="step4-title" data-i18n="estimate-thankyou-title">
+        Thank you for your request!
+      </h2>
+      <p class="step4-desc" data-i18n="estimate-thankyou-desc">
         One of our team members will contact you shortly to schedule your Free
         Estimate and a 25% Discount.
       </p>
-      <p class="step4-text">We will be calling you from this number:</p>
+      <p class="step4-text" data-i18n="estimate-thankyou-text">
+        We will be calling you from this number:
+      </p>
       <p class="phone">(647) 576-2090</p>
-      <p class="note">...so please make sure you pick up.</p>
+      <p class="note" data-i18n="estimate-thankyou-note">
+        ...so please make sure you pick up.
+      </p>
     </div>
   </div>
 </section>
 
       <section class="benefits" id="Why">
   <div class="container benefits-container">
-    <h1 class="benefits-title">Benefits of working <span>with us</span></h1>
+    <h1 class="benefits-title" data-i18n="benefits-title">
+      Benefits of working <span>with us</span>
+    </h1>
     <ul class="benefits-list">
       <li class="benefits-list-item">
         <img
@@ -373,8 +385,10 @@
           width="125px"
           height="142px"
         />
-        <h2 class="benefits-subtitle">Get back up to $250 per window</h2>
-        <p class="Benefits-text">
+        <h2 class="benefits-subtitle" data-i18n="benefits-sub1">
+          Get back up to $250 per window
+        </h2>
+        <p class="Benefits-text" data-i18n="benefits-text1">
           We carry ENERGY STAR® 2021 Most Efficient certified Windows and Doors
           that qualify for the maximum amount redeemable under the Canada
           Greener Homes Grant
@@ -388,8 +402,10 @@
           width="166px"
           height="131px"
         />
-        <h2 class="benefits-subtitle">Financing Available</h2>
-        <p class="Benefits-text">
+        <h2 class="benefits-subtitle" data-i18n="benefits-sub2">
+          Financing Available
+        </h2>
+        <p class="Benefits-text" data-i18n="benefits-text2">
           We offer a few fast, flexible, and easy ways to pay for your window
           replacement project. Payment deferral for 3, 6, or 12 months is
           available. Payments starting at just $39 per month.
@@ -403,8 +419,10 @@
           width="91px"
           height="118px"
         />
-        <h2 class="benefits-subtitle">Lifetime warranty</h2>
-        <p class="Benefits-text">
+        <h2 class="benefits-subtitle" data-i18n="benefits-sub3">
+          Lifetime warranty
+        </h2>
+        <p class="Benefits-text" data-i18n="benefits-text3">
           We are confident in the durability of our windows and doors! Any
           components that fail for any reason, will be promptly replaced or
           repaired.
@@ -416,16 +434,17 @@
 
       <section class="canada" id="canada">
   <div class="container canada-container">
-    <h2 class="canada-title">CANADA GREENER HOMES GRANT</h2>
+    <h2 class="canada-title" data-i18n="canada-title">
+      CANADA GREENER HOMES GRANT
+    </h2>
 
-    <p class="canada-text">
+    <p class="canada-text" data-i18n="canada-text">
       Optima Windows and Doors is an approved installer for The Greener Homes
-      Grant. With our new Energy Star 2021 certified windows and doors, you can
+      Grant. With our new Energy Star 2026 certified windows and doors, you can
       forget about window drafts, heat loss, and mold.
     </p>
   </div>
 
-  <!-- декоративные листья -->
   <img
     src="/Canadian-windows-Optima-landing-Vite-Alexander/assets/leaf-1-1x-CE2iFFSB.webp"
     srcset="/Canadian-windows-Optima-landing-Vite-Alexander/assets/leaf-1-1x-CE2iFFSB.webp 1x, /Canadian-windows-Optima-landing-Vite-Alexander/assets/leaf-1-2x-BUUbetxF.webp 2x"
@@ -433,7 +452,6 @@
     alt=""
     aria-hidden="true"
   />
-
   <img
     src="/Canadian-windows-Optima-landing-Vite-Alexander/assets/leaf-2-1x-BUJLRz_d.webp"
     srcset="/Canadian-windows-Optima-landing-Vite-Alexander/assets/leaf-2-1x-BUJLRz_d.webp 1x, /Canadian-windows-Optima-landing-Vite-Alexander/assets/leaf-2-2x-BMWRTpki.webp 2x"
@@ -441,7 +459,6 @@
     alt=""
     aria-hidden="true"
   />
-
   <img
     src="/Canadian-windows-Optima-landing-Vite-Alexander/assets/leaf-3-1x-Btgt5q6_.webp"
     srcset="/Canadian-windows-Optima-landing-Vite-Alexander/assets/leaf-3-1x-Btgt5q6_.webp 1x, /Canadian-windows-Optima-landing-Vite-Alexander/assets/leaf-3-2x-DsgktY3_.webp 2x"
@@ -449,7 +466,6 @@
     alt=""
     aria-hidden="true"
   />
-
   <img
     src="/Canadian-windows-Optima-landing-Vite-Alexander/assets/leaf-4-1x-BDa6COye.webp"
     srcset="/Canadian-windows-Optima-landing-Vite-Alexander/assets/leaf-4-1x-BDa6COye.webp 1x, /Canadian-windows-Optima-landing-Vite-Alexander/assets/leaf-4-2x-CmJIOyK8.webp 2x"
@@ -472,17 +488,17 @@
           <svg class="star"><use href="/Canadian-windows-Optima-landing-Vite-Alexander/assets/sprite-_W040JIe.svg#icon-Star"></use></svg>
         </div>
 
-        <p class="review-text">
+        <p class="review-text" data-i18n="review-text1">
           Upon conducting initial “market research” (we checked a few local
-          businesses) in summer 2021, we chose “Optima Windows and Doors” for
+          businesses) in summer 2025, we chose “Optima Windows and Doors” for
           the best value and care. Chris Z. spent a few hours in our house
           explaining every little detail about the work to be done, finance
           options, answered all our questions, and was available on phone.
         </p>
 
         <div class="review-footer">
-          <p class="review-author">Igor Kolomiets</p>
-          <p class="review-date">2 months ago</p>
+          <p class="review-author" data-i18n="review-author1">Igor Kolomiets</p>
+          <p class="review-date" data-i18n="review-date1">2 months ago</p>
         </div>
       </li>
 
@@ -496,7 +512,7 @@
           <svg class="star"><use href="/Canadian-windows-Optima-landing-Vite-Alexander/assets/sprite-_W040JIe.svg#icon-Star"></use></svg>
         </div>
 
-        <p class="review-text">
+        <p class="review-text" data-i18n="review-text2">
           We heard about Optima through our neighbor across the park. They had a
           sign up, we saw the work that was done, and we were really happy with
           it and that’s when we called. Meeting Chris, the salesperson, and
@@ -506,8 +522,10 @@
         </p>
 
         <div class="review-footer">
-          <p class="review-author">Donna and Trevor, Milton</p>
-          <p class="review-date">2 months ago</p>
+          <p class="review-author" data-i18n="review-author2">
+            Donna and Trevor, Milton
+          </p>
+          <p class="review-date" data-i18n="review-date2">2 months ago</p>
         </div>
       </li>
 
@@ -521,7 +539,7 @@
           <svg class="star"><use href="/Canadian-windows-Optima-landing-Vite-Alexander/assets/sprite-_W040JIe.svg#icon-Star"></use></svg>
         </div>
 
-        <p class="review-text">
+        <p class="review-text" data-i18n="review-text3">
           We’re at 10 years old builders’ windows and had all kinds of issues
           with them. Hired Optima Windows and Doors to replace just two windows
           and were amazed by the difference between the old ones and the ones
@@ -531,8 +549,8 @@
         </p>
 
         <div class="review-footer">
-          <p class="review-author">Gaptil Good</p>
-          <p class="review-date">2 months ago</p>
+          <p class="review-author" data-i18n="review-author3">Donald J.Tramp</p>
+          <p class="review-date" data-i18n="review-date3">2 weeks ago</p>
         </div>
       </li>
     </ul>
@@ -541,9 +559,9 @@
 
       <section class="advantage" id="advantage">
   <div class="container advantage-container">
-    <h2 class="advantage-title">OUR ADVANTAGE</h2>
+    <h2 class="advantage-title" data-i18n="advantage-title">OUR ADVANTAGE</h2>
 
-    <p class="advantage-text">
+    <p class="advantage-text" data-i18n="advantage-text">
       Patented window technology protects your home in any weather and is
       guaranteed and with a Lifetime Warranty.
     </p>
@@ -562,11 +580,15 @@
         />
 
         <div class="badge">
-          <svg class="badge-bg" viewBox="0 0 290 177" aria-hidden="true">
+          <svg
+            class="advantage-badge-bg"
+            viewBox="0 0 290 177"
+            aria-hidden="true"
+          >
             <use href="/Canadian-windows-Optima-landing-Vite-Alexander/assets/sprite-_W040JIe.svg#highlight-badge" />
           </svg>
 
-          <span class="badge-text">
+          <span class="advantage-badge-text" data-i18n="badge-text">
             whole home<br />
             replacement<br />
             ≈ 8 hours
@@ -598,7 +620,7 @@
       </div>
     </div>
 
-    <p class="advantage-bottom-text">
+    <p class="advantage-bottom-text" data-i18n="advantage-bottom-text">
       The new generation of window glass and construction make window
       replacement an essential update for many households. This clever and
       affordable upgrade increases home value, plus
@@ -615,10 +637,10 @@
 
       <section class="better-view">
   <div class="container better-container">
-    <h2 class="better-title">
-      NOW, THAT’S BETTER! <span class="leaf">🍃</span>
+    <h2 class="better-title" data-i18n="better-title">
+      NOW, THAT'S BETTER! <span class="leaf">🍃</span>
     </h2>
-    <p class="better-text">
+    <p class="better-text" data-i18n="better-text">
       We carefully remove your old windows and doors and take them away to a
       recycling facility.
       <span
@@ -634,7 +656,6 @@
     <!-- OLD WINDOW -->
     <div class="better-window old-window">
       <div class="window-bg old-bg"></div>
-
       <img
         src="/Canadian-windows-Optima-landing-Vite-Alexander/assets/old-window-1x-Cx5Flzyw.webp"
         srcset="/Canadian-windows-Optima-landing-Vite-Alexander/assets/old-window-2x-B_Z0U8pO.webp 2x"
@@ -647,7 +668,6 @@
     <!-- NEW WINDOW -->
     <div class="better-window new-window">
       <div class="window-bg new-bg"></div>
-
       <img
         src="/Canadian-windows-Optima-landing-Vite-Alexander/assets/new-window-1x-HeKDdTeJ.webp"
         srcset="/Canadian-windows-Optima-landing-Vite-Alexander/assets/new-window-2x-BkVUUwHH.webp 2x"
@@ -662,7 +682,7 @@
       <svg class="eye-icon">
         <use href="/Canadian-windows-Optima-landing-Vite-Alexander/assets/sprite-_W040JIe.svg#icon-eye"></use>
       </svg>
-      Take a look
+      <span data-i18n="better-btn">Take a look</span>
     </button>
 
     <button class="arrow-btn" aria-label="Switch">
@@ -675,15 +695,14 @@
     <a href="./img/better/new-window-2x.webp" data-lightbox="better">
       <img
         src="/Canadian-windows-Optima-landing-Vite-Alexander/assets/new-window-1x-HeKDdTeJ.webp"
-        alt="After installation — bright, energy-efficient view"
+        alt="After installation"
         class="visually-hidden"
       />
     </a>
-
     <a href="./img/better/old-window-2x.webp" data-lightbox="better">
       <img
         src="/Canadian-windows-Optima-landing-Vite-Alexander/assets/old-window-1x-Cx5Flzyw.webp"
-        alt="Before installation — outdated windows and poor insulation"
+        alt="Before installation"
         class="visually-hidden"
       />
     </a>
@@ -692,9 +711,11 @@
 
       <section class="reasons">
   <div class="container reasons-container">
-    <h2 class="reasons-title">When and why replace windows and doors?</h2>
+    <h2 class="reasons-title" data-i18n="reasons-title">
+      When and why replace windows and doors?
+    </h2>
 
-    <p class="reasons-text">
+    <p class="reasons-text" data-i18n="reasons-text">
       If you are experiencing one or more of the following problems, it's time
       to replace or repair your windows to reduce your energy costs
     </p>
@@ -715,7 +736,7 @@
           </svg>
         </div>
 
-        <p class="reason-text">Cloudiness, mold</p>
+        <p class="reason-text" data-i18n="reason-card1">Cloudiness, mold</p>
       </div>
 
       <!-- 2 -->
@@ -733,7 +754,7 @@
           </svg>
         </div>
 
-        <p class="reason-text">High heat cost</p>
+        <p class="reason-text" data-i18n="reason-card2">High heat cost</p>
       </div>
 
       <!-- 3 -->
@@ -751,7 +772,9 @@
           </svg>
         </div>
 
-        <p class="reason-text">Warping, rotting frames</p>
+        <p class="reason-text" data-i18n="reason-card3">
+          Warping, rotting frames
+        </p>
       </div>
 
       <!-- 4 -->
@@ -769,7 +792,7 @@
           </svg>
         </div>
 
-        <p class="reason-text">Peeling paint</p>
+        <p class="reason-text" data-i18n="reason-card4">Peeling paint</p>
       </div>
     </div>
   </div>
@@ -777,9 +800,11 @@
 
       <section class="technology" id="technologies">
   <div class="container technology-container">
-    <h1 class="technology-title">SUPERIOR TECHNOLOGY</h1>
+    <h1 class="technology-title" data-i18n="technology-title">
+      SUPERIOR TECHNOLOGY
+    </h1>
 
-    <p class="technology-text">
+    <p class="technology-text" data-i18n="technology-text">
       Replacing windows and doors with new energy-efficient models will save up
       to 50% on heating and cooling costs, and make your home feel more
       comfortable
@@ -795,8 +820,10 @@
           height="122"
           loading="lazy"
         />
-        <h2 class="technology-subtitle">Low-E Glass</h2>
-        <p class="technology-card-text">
+        <h2 class="technology-subtitle" data-i18n="technology-sub1">
+          Low-E Glass
+        </h2>
+        <p class="technology-card-text" data-i18n="technology-card1">
           Reflects solar rays in the summer and retains infrared rays in the
           winter, helping to heat your home. Optima Windows & Doors currently
           uses a 5th generation Low-E product.
@@ -813,8 +840,10 @@
           height="128"
           loading="lazy"
         />
-        <h2 class="technology-subtitle">Premium Vinyl</h2>
-        <p class="technology-card-text">
+        <h2 class="technology-subtitle" data-i18n="technology-sub2">
+          Premium Vinyl
+        </h2>
+        <p class="technology-card-text" data-i18n="technology-card2">
           We build heavy-duty windows using premium, surgical-grade vinyl with
           no fillers or re-grind. This guarantees durability without warping,
           fading, or loss of performance.
@@ -831,8 +860,10 @@
           height="145"
           loading="lazy"
         />
-        <h2 class="technology-subtitle">Advanced Spacer System</h2>
-        <p class="technology-card-text">
+        <h2 class="technology-subtitle" data-i18n="technology-sub3">
+          Advanced Spacer System
+        </h2>
+        <p class="technology-card-text" data-i18n="technology-card3">
           Any use of aluminum in window construction results in heat loss. To
           avoid this, Optima does not use any type of metal in its spacer
           systems.
@@ -845,8 +876,10 @@
 
       <section class="windows">
   <div class="container windows-container">
-    <h1 class="windows-titile">Any types of windows</h1>
-    <p class="windows-desc">
+    <h1 class="windows-titile" data-i18n="windows-titile">
+      Any types of windows
+    </h1>
+    <p class="windows-desc" data-i18n="windows-desc">
       Replacing windows and doors with new energy-efficient models will save up
       to 50% on heating and cooling costs, and make your home feel
     </p>
@@ -865,7 +898,7 @@
             height="171"
             aria-hidden="true"
           />
-          <p class="windows-text">Awning Windows</p>
+          <p class="windows-text" data-i18n="windows-text1">Awning Windows</p>
         </a>
       </li>
       <li class="windows-list-item">
@@ -882,7 +915,7 @@
             height="171"
             aria-hidden="true"
           />
-          <p class="windows-text">Casement Windows</p>
+          <p class="windows-text" data-i18n="windows-text2">Casement Windows</p>
         </a>
       </li>
       <li class="windows-list-item">
@@ -899,7 +932,7 @@
             height="171"
             aria-hidden="true"
           />
-          <p class="windows-text">Fixed Windows</p>
+          <p class="windows-text" data-i18n="windows-text3">Fixed Windows</p>
         </a>
       </li>
       <li class="windows-list-item">
@@ -916,7 +949,7 @@
             height="171"
             aria-hidden="true"
           />
-          <p class="windows-text">Hung Windows</p>
+          <p class="windows-text" data-i18n="windows-text4">Hung Windows</p>
         </a>
       </li>
       <li class="windows-list-item">
@@ -933,7 +966,7 @@
             height="171"
             aria-hidden="true"
           />
-          <p class="windows-text">Slider Windows</p>
+          <p class="windows-text" data-i18n="windows-text5">Slider Windows</p>
         </a>
       </li>
       <li class="windows-list-item">
@@ -950,7 +983,7 @@
             height="171"
             aria-hidden="true"
           />
-          <p class="windows-text">Hopper Windows</p>
+          <p class="windows-text" data-i18n="windows-text6">Hopper Windows</p>
         </a>
       </li>
       <li class="windows-list-item">
@@ -967,7 +1000,9 @@
             height="171"
             aria-hidden="true"
           />
-          <p class="windows-text">End Vent Slider Windows</p>
+          <p class="windows-text" data-i18n="windows-text7">
+            End Vent Slider Windows
+          </p>
         </a>
       </li>
       <li class="windows-list-item">
@@ -984,7 +1019,9 @@
             height="171"
             aria-hidden="true"
           />
-          <p class="windows-text">Double Hung Windows</p>
+          <p class="windows-text" data-i18n="windows-text8">
+            Double Hung Windows
+          </p>
         </a>
       </li>
       <li class="windows-list-item">
@@ -996,12 +1033,14 @@
             src="data:image/webp;base64,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"
             srcset="data:image/webp;base64,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 1x"
             class="windows-img"
-            alt="tilt & turn windows"
+            alt="tilt &amp; turn windows"
             width="176"
             height="171"
             aria-hidden="true"
           />
-          <p class="windows-text">Tilt & Turn Windows</p>
+          <p class="windows-text" data-i18n="windows-text9">
+            Tilt & Turn Windows
+          </p>
         </a>
       </li>
       <li class="windows-list-item">
@@ -1018,7 +1057,9 @@
             height="171"
             aria-hidden="true"
           />
-          <p class="windows-text">Single Slider Windows</p>
+          <p class="windows-text" data-i18n="windows-text10">
+            Single Slider Windows
+          </p>
         </a>
       </li>
     </ul>
@@ -1027,12 +1068,12 @@
 
       <section class="customer">
   <div class="container customer-container">
-    <h1 class="customer-title">customer reviews</h1>
+    <h1 class="customer-title" data-i18n="customer-title">customer reviews</h1>
 
     <ul class="customer-list">
       <li class="customer-list-item">
         <p class="quotes outline">“</p>
-        <p class="reviews-text">
+        <p class="reviews-text" data-i18n="customer-review1">
           “We heard about Optima through our neighbor across the park. They had
           a sign up, we saw the work that was done, and we were really happy
           with it and that’s when we called. Meeting Chris, the salesperson, and
@@ -1042,22 +1083,26 @@
           noticed that we don’t need to have our furnace turned up high to
           maintain the house temperature.“
         </p>
-        <p class="author-text">Donna and Trevor, Milton</p>
+        <p class="author-text" data-i18n="customer-author1">
+          Donna and Trevor, Milton
+        </p>
       </li>
 
       <li class="customer-list-item">
         <p class="quotes filled">“</p>
-        <p class="reviews-text">
+        <p class="reviews-text" data-i18n="customer-review2">
           "I received 3 quotes and awarded Optima Windows to replace all windows
           in our home. They were competitively priced and accommodating to ALL
           our custom requests."
         </p>
-        <p class="author-text">David Nicholson, Oakville</p>
+        <p class="author-text" data-i18n="customer-author2">
+          David Nicholson, Oakville
+        </p>
       </li>
 
       <li class="customer-list-item">
         <p class="quotes outline">“</p>
-        <p class="reviews-text">
+        <p class="reviews-text" data-i18n="customer-review3">
           “We have received several quotes and spent a lot of time entertaining
           different company representatives. We found that Optima has the
           highest quality windows for the best value. After the products were
@@ -1065,7 +1110,7 @@
           high-quality windows and doors, don’t look any further than Optima
           windows and doors. My son is replacing his windows with them now.”
         </p>
-        <p class="author-text">Ruth, Toronto</p>
+        <p class="author-text" data-i18n="customer-author3">Ruth, Toronto</p>
       </li>
     </ul>
   </div>
@@ -1075,46 +1120,55 @@
 
     <footer class="footer" id="contacts">
   <div class="container footer-container">
-    <!-- ================= CONTENT ================= -->
     <div class="footer-content">
       <!-- LEFT -->
       <div class="footer-left">
-        <h2 class="footer-title">
+        <h2 class="footer-title" data-i18n="footer-title">
           LEAVE THE APPLICATION,<br />
           <span>WE WILL CALL YOU</span>
         </h2>
 
-        <p class="footer-desc">
+        <p class="footer-desc" data-i18n="footer-desc">
           Patented window technology protects your home in any weather and is
           guaranteed.
         </p>
 
         <form class="footer-form" id="footerForm">
           <div class="form-group">
-            <label class="footer-label">Your phone</label>
+            <label class="footer-label" data-i18n="footer-phone-label"
+              >Your phone</label
+            >
             <input
               type="tel"
+              data-i18n-placeholder="footer-phone-placeholder"
               placeholder="Enter the phone number"
               class="footer-input"
               required
-              pattern="[0-9]{12}"      
-               />        
-    <p class="input-error">The phone number must contain exactly 12 digits,for example XX(XXX)XXXXXXXX</p>
+              pattern="[0-9]{12}"
+            />
+            <p class="input-error" data-i18n="footer-phone-error">
+              The phone number must contain exactly 12 digits, for example
+              XX(XXX)XXXXXXXX
+            </p>
           </div>
 
           <div class="form-group">
-            <label class="footer-label">Your name</label>
+            <label class="footer-label" data-i18n="footer-name-label"
+              >Your name</label
+            >
             <input
               type="text"
+              data-i18n-placeholder="footer-name-placeholder"
               placeholder="Enter your name"
               class="footer-input"
               required
-      minlength="4"
-      maxlength="64"
-      title="The name must contain 4 to 64 characters."
-      pattern="[A-Za-zА-Яа-яЇїІіЄєҐґ\s'-]+"
-               />
-               <p class="input-error">The name must contain 4 to 64 characters</p>
+              minlength="4"
+              maxlength="64"
+              pattern="[A-Za-zА-Яа-яЇїІіЄєҐґ\s'-]+"
+            />
+            <p class="input-error" data-i18n="footer-name-error">
+              The name must contain 4 to 64 characters
+            </p>
           </div>
         </form>
       </div>
@@ -1129,125 +1183,146 @@
             class="hand-img"
           />
 
-          <!-- PHONE SCREEN -->
           <div class="phone-screen">
             <svg class="leav-icon">
               <use href="/Canadian-windows-Optima-landing-Vite-Alexander/assets/sprite-_W040JIe.svg#icon-leav"></use>
             </svg>
-
             <div class="phone-optima">Optima</div>
             <div class="phone-number">(647) 952-2191</div>
-
-            <button class="phone-btn" type="submit" form="footerForm">CALL ME</button>
+            <button
+              class="phone-btn"
+              type="submit"
+              form="footerForm"
+              data-i18n="footer-callme"
+            >
+              CALL ME
+            </button>
           </div>
 
           <div class="phone-success hidden">
             <svg class="leav-icon">
               <use href="/Canadian-windows-Optima-landing-Vite-Alexander/assets/sprite-_W040JIe.svg#icon-leav"></use>
             </svg>
-
-  <div class="success-check">
-    <svg width="32" height="32">
-      <use href="/Canadian-windows-Optima-landing-Vite-Alexander/assets/sprite-_W040JIe.svg#icon-check"></use>
-    </svg>
-  </div>
-
-  <p class="success-text">Please <br/> expect call</p>
-</div>
+            <div class="success-check">
+              <svg width="32" height="32">
+                <use href="/Canadian-windows-Optima-landing-Vite-Alexander/assets/sprite-_W040JIe.svg#icon-check"></use>
+              </svg>
+            </div>
+            <p class="success-text" data-i18n="footer-success-text">
+              Please <br />
+              expect call
+            </p>
+          </div>
         </div>
       </div>
     </div>
 
-    <p class="footer-bottom-mobile">
-  © 2021 Optima windows and doors.All rights reserved.(647) 952-2191
-</p>
-
-
-
-    <!-- ================= SOCIAL BLOCKS ================= -->
-    <div class="footer-social-blocks">
-         
-  <!-- SLOT 1 -->
- <div class="social-slot">
-  <div class="footer-trigger">
-    <span>Follow us</span>
-  </div>
-  <a href="https://www.instagram.com/optima_windows/" 
-     target="_blank" 
-     rel="noopener noreferrer" 
-     class="social-block instagram">
-    <svg class="social-icon">
-      <use href="/Canadian-windows-Optima-landing-Vite-Alexander/assets/sprite-_W040JIe.svg#icon-instagram"></use>
-    </svg>
-    <p class="social-titile">Instagram</p>
-    <p class="social-followers">1k followers</p>
-  </a>
-</div>
-
-        <!-- SLOT 2 -->
-  <div class="social-slot">
-  <div class="footer-trigger">
-    <span>Follow us</span>
-  </div>
-  <a href="https://www.facebook.com/optima_windows/" 
-     target="_blank" 
-     rel="noopener noreferrer" 
-     class="social-block facebook is-main">
-    <h2 class="title-social">Follow us</h2>
-    <svg class="social-icon">
-      <use href="/Canadian-windows-Optima-landing-Vite-Alexander/assets/sprite-_W040JIe.svg#icon-facebook"></use>
-    </svg>
-    <p class="social-titile">Facebook</p>
-    <p class="social-followers main">1k followers</p>
-    <p class="footer-bottom">
-      © 2021 Optima windows and doors.<br />
-      All rights reserved.<br />
-      (647) 952-2191
+    <p class="footer-bottom-mobile" data-i18n="footer-copyright-mobile">
+      © 2026 Optima windows and doors. All rights reserved. (647) 952-2191
     </p>
-  </a>
-</div>
+
+    <!-- SOCIAL BLOCKS -->
+    <div class="footer-social-blocks">
+      <!-- SLOT 1 -->
+      <div class="social-slot">
+        <div class="footer-trigger">
+          <span data-i18n="footer-follow">Follow us</span>
+        </div>
+        <a
+          href="https://www.instagram.com/optima_windows/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-block instagram"
+        >
+          <svg class="social-icon">
+            <use href="/Canadian-windows-Optima-landing-Vite-Alexander/assets/sprite-_W040JIe.svg#icon-instagram"></use>
+          </svg>
+          <p class="social-titile">Instagram</p>
+          <p class="social-followers" data-i18n="footer-followers">
+            1k followers
+          </p>
+        </a>
+      </div>
+
+      <!-- SLOT 2 -->
+      <div class="social-slot">
+        <div class="footer-trigger">
+          <span data-i18n="footer-follow">Follow us</span>
+        </div>
+        <a
+          href="https://www.facebook.com/OptimaWindows/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-block facebook is-main"
+        >
+          <h2 class="title-social" data-i18n="footer-follow">Follow us</h2>
+          <svg class="social-icon">
+            <use href="/Canadian-windows-Optima-landing-Vite-Alexander/assets/sprite-_W040JIe.svg#icon-facebook"></use>
+          </svg>
+          <p class="social-titile">Facebook</p>
+          <p class="social-followers main" data-i18n="footer-followers">
+            1k followers
+          </p>
+          <p class="footer-bottom" data-i18n="footer-copyright">
+            © 2026 Optima windows and doors.<br />
+            All rights reserved.<br />
+            (647) 952-2191
+          </p>
+        </a>
+      </div>
 
       <!-- SLOT 3 -->
-  <div class="social-slot">
-  <div class="footer-trigger">
-    <span>Follow us</span>
-  </div>
-  <a href="https://www.youtube.com/@optima_windows" 
-     target="_blank" 
-     rel="noopener noreferrer" 
-     class="social-block youtube">
-    <svg class="social-icon">
-      <use href="/Canadian-windows-Optima-landing-Vite-Alexander/assets/sprite-_W040JIe.svg#icon-youTube"></use>
-    </svg>
-    <p class="social-titile">Youtube</p>
-    <p class="social-followers">1k followers</p>
-  </a>
-</div>
- 
+      <div class="social-slot">
+        <div class="footer-trigger">
+          <span data-i18n="footer-follow">Follow us</span>
+        </div>
+        <a
+          href="https://www.youtube.com/@optima_windows"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-block youtube"
+        >
+          <svg class="social-icon">
+            <use href="/Canadian-windows-Optima-landing-Vite-Alexander/assets/sprite-_W040JIe.svg#icon-youTube"></use>
+          </svg>
+          <p class="social-titile">Youtube</p>
+          <p class="social-followers" data-i18n="footer-followers">
+            1k followers
+          </p>
+        </a>
+      </div>
     </div>
+  </div>
 </footer>
 
 
-    <div class="mobile-menu is-hidden" id="mobile-menu">
+    <!-- MOBILE MENU -->
+<div class="mobile-menu-backdrop" id="mobile-backdrop"></div>
+<div class="mobile-menu" id="mobile-menu">
   <div class="mobile-menu-inner">
     <button class="mobile-close">
-      <svg class="mobile-close-btn" width="8" height="8" aria-hidden="true">
+      <svg class="mobile-close-btn" width="16" height="16" aria-hidden="true">
         <use href="/Canadian-windows-Optima-landing-Vite-Alexander/assets/sprite-_W040JIe.svg#icon-close-btn"></use>
       </svg>
     </button>
 
     <nav class="mobile-nav">
       <ul>
-        <li><a href="#Why">Why replace</a></li>
-        <li><a href="#advantage">Our Advantage</a></li>
-        <li><a href="#technologies">Technologies</a></li>
-        <li><a href="#contacts">Contacts</a></li>
+        <li><a href="#Why" data-i18n="nav-why">Why replace</a></li>
+        <li>
+          <a href="#advantage" data-i18n="nav-advantage">Our Advantage</a>
+        </li>
+        <li>
+          <a href="#technologies" data-i18n="nav-technologies">Technologies</a>
+        </li>
+        <li><a href="#contacts" data-i18n="nav-contacts">Contacts</a></li>
       </ul>
     </nav>
 
-    <a href="tel:6479522191" class="mobile-phone"> (647) 952-2191 </a>
-
-    <button class="btn mobile-call">Call me</button>
+    <a href="tel:6479522191" class="mobile-phone">(647) 952-2191</a>
+    <a href="tel:6479522191" class="mobile-call" data-i18n="mobile-call"
+      >Call me</a
+    >
   </div>
 </div>
 
@@ -1265,14 +1340,16 @@
       </svg>
     </div>
 
-    <h2 class="modal-title">Your request has been received!</h2>
+    <h2 class="modal-title" data-i18n="modal-title">
+      Your request has been received!
+    </h2>
 
-    <p class="modal-text">
+    <p class="modal-text" data-i18n="modal-text">
       One of our team members will be calling you soon to schedule a
-      <strong>FREE estimate</strong>.
+      <strong data-i18n="modal">FREE estimate</strong>.
     </p>
 
-    <p class="modal-subtext">
+    <p class="modal-subtext" data-i18n="modal-subtext">
       Our project manager will inspect and measure your windows and doors,
       discuss your needs, show you samples of our products and provide you with
       a custom, no-obligation quote.
@@ -1293,10 +1370,10 @@
       <svg width="20" height="20">
         <use href="/Canadian-windows-Optima-landing-Vite-Alexander/assets/sprite-_W040JIe.svg#icon-Geo"></use>
       </svg>
-      <h3>The list of cities of presence</h3>
+      <h3 data-i18n="geo-title">The list of cities of presence</h3>
     </div>
 
-    <p class="geo-text">
+    <p class="geo-text" data-i18n="geo-text">
       We work in and around all major cities in Southern Ontario including
       Toronto, Oakville, Mississauga, Brampton, Aurora, Barrie, Richmond Hill,
       Thornhill, Whitby, Maple, Newmarket, Guelph, Pickering, Georgina, Orillia,
