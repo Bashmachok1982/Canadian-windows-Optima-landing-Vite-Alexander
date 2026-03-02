@@ -8,7 +8,7 @@ export default defineConfig(({ command }) => {
   const isDev = command === 'serve';
 
   return {
-    base: isDev ? '/' : '/Canadian-windows-Optima-landing-Vite-Alexander/',
+    base: isDev ? '/' : './', // ← вот это главное изменение
 
     define: {
       [isDev ? 'global' : '_global']: {},
