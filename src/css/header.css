@@ -6,7 +6,6 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  /* background: #fff; */
 }
 
 .header-container {
@@ -18,38 +17,130 @@
   padding: 26px 16px;
 }
 
-/* NAV hidden на мобильном */
 .desktop-nav {
   display: none;
 }
 
-/* ACTIONS */
 .header-actions {
   display: flex;
   align-items: center;
   gap: 24px;
 }
 
-/* PHONE — базовые стили */
+/* ===== UNIVERSAL LINK ANIMATION ===== */
+
+a {
+  transition:
+    transform 0.25s ease,
+    color 0.25s ease;
+}
+
+a:hover,
+a:focus {
+  transform: scale(1.05);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+a:focus {
+  outline: 2px solid #ff6d3f;
+  outline-offset: 3px;
+}
+
+/* ===== PHONE ===== */
+
 .phone {
   display: flex;
   align-items: center;
   gap: 8px;
   text-decoration: none;
-  color: #36162e; /* цвет текста номера */
+  color: #36162e;
 }
 
-/* По умолчанию (мобильный): показываем только иконку */
 .phone-text {
   display: none;
 }
 
-/* CALL ME hidden на мобильном */
-.call-btn {
-  display: none;
+.phone-icon {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.25s ease;
 }
 
-/* BURGER */
+.phone:hover .phone-icon,
+.phone:focus .phone-icon {
+  transform: scale(1.15);
+}
+
+/* ===== CALL BUTTON ===== */
+
+.call-btn {
+  display: none;
+  align-items: center;
+  gap: 4px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: #ff6d3f;
+  background: none;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    transform 0.25s ease,
+    color 0.25s ease;
+}
+
+.call-btn:hover,
+.call-btn:focus {
+  transform: scale(1.07);
+  color: #36162e;
+}
+
+.call-icon {
+  transition: transform 0.25s ease;
+}
+
+.call-btn:hover .call-icon,
+.call-btn:focus .call-icon {
+  transform: scale(1.15);
+}
+
+/* ===== NAVIGATION ===== */
+
+.nav-list {
+  display: flex;
+  gap: 40px;
+}
+
+.nav-list a {
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 1.7;
+  color: #36162e;
+  text-decoration: none;
+}
+
+.nav-list a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: #ff6d3f;
+  transition: width 0.25s ease;
+}
+
+.nav-list a:hover::after,
+.nav-list a:focus::after {
+  width: 100%;
+}
+
+/* ===== BURGER ===== */
+
 .burger-btn {
   background: none;
   border: none;
@@ -58,126 +149,52 @@
   transition: transform 0.25s ease;
 }
 
-.burger-icon {
-  width: 32px;
-  height: 32px;
-  transition: transform 0.25s ease;
-}
-
-/* Раскраска иконки бургера (по твоему обновлённому порядку) */
-.burger-icon .part-1,
-.burger-icon .part-2,
-.burger-icon .part-4 {
-  fill: #320b29; /* purple */
-}
-
-.burger-icon .part-3,
-.burger-icon .part-5 {
-  fill: #9acb3c; /* green */
-}
-
-/* Hover / Focus: весь бургер целиком (scale + цветной эффект) */
 .burger-btn:hover,
 .burger-btn:focus {
   transform: scale(1.1);
 }
 
-.burger-btn:hover .burger-icon,
-.burger-btn:focus .burger-icon {
-  transform: scale(1.1);
-}
-
-.burger-btn:hover .part-1,
-.burger-btn:hover .part-2,
-.burger-btn:hover .part-4,
-.burger-btn:focus .part-1,
-.burger-btn:focus .part-2,
-.burger-btn:focus .part-4 {
-  fill: #ff6d3f; /* акцентный оранжевый на hover (или #36162e для потемнения) */
-  transition: fill 0.25s ease;
-}
-
-.burger-btn:hover .part-3,
-.burger-btn:hover .part-5,
-.burger-btn:focus .part-3,
-.burger-btn:focus .part-5 {
-  fill: #9acb3c; /* зелёный остаётся или можно #320b29 */
-  transition: fill 0.25s ease;
-}
-.phone-icon {
-  width: 24px;
-  height: 24px;
-}
-
 /* ===== TABLET ≥768 ===== */
+
 @media (min-width: 768px) {
-  /* call-btn НЕ показываем на планшете */
-  .call-btn {
-    display: none;
-  }
-
-  .call-icon {
-    fill: #ff6d3f;
-  }
-
   .phone {
     gap: 12px;
   }
+
   .phone-text {
     display: none;
   }
 }
 
 /* ===== DESKTOP ≥1175 ===== */
+
 @media (min-width: 1175px) {
   .desktop-nav {
     display: block;
-  }
-
-  .nav-list {
-    display: flex;
-    gap: 40px;
-  }
-
-  .nav-list a {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    font-size: 17px;
-    line-height: 1.7;
-    color: #36162e;
-    text-decoration: none;
   }
 
   .burger-btn {
     display: none;
   }
 
-  /* Только иконка телефона скрывается на десктопе (номер уже none) */
   .phone-icon {
     display: none;
   }
+
   .phone-text {
-    display: inline; /* ← вот ключевой момент */
+    display: inline;
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
     font-size: 20px;
     line-height: 1.7;
     color: #36162e;
   }
+
   .phone {
-    gap: 0; /* убираем gap, т.к. иконки нет */
+    gap: 0;
   }
-  /* call-btn ПОКАЗЫВАЕМ ТОЛЬКО НА ДЕСКТОПЕ */
+
   .call-btn {
     display: flex;
-    align-items: center;
-    gap: 4px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    font-size: 15px;
-    color: #ff6d3f;
-    background: none;
-    border: none;
-    cursor: pointer;
   }
 }

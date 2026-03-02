@@ -275,7 +275,7 @@ const translations = {
     'footer-name-label': 'Ваше имя',
     'footer-name-placeholder': 'Введите ваше имя',
     'footer-callme': 'ПОЗВОНИ',
-    'footer-follow': 'Подпись',
+    'footer-follow': 'Подпишись',
     'footer-followers': '1k Подписчиков',
     'footer-copyright':
       '© 2026 Optima windows and doors.<br />Все права защищены.<br />(647) 952-2191',
@@ -285,7 +285,6 @@ const translations = {
       'Номер должен содержать ровно 12 цифр, например XX(XXX)XXXXXXXX',
     'footer-name-error': 'Имя должно содержать от 4 до 64 символов',
     'footer-success-text': 'Ожидайте звонка',
-    'footer-followers': '1k подписчиков',
   },
 
   ua: {
@@ -420,7 +419,6 @@ const translations = {
       'Номер має містити рівно 12 цифр, наприклад XX(XXX)XXXXXXXX',
     'footer-name-error': "Ім'я має містити від 4 до 64 символів",
     'footer-success-text': 'Очікуйте дзвінка',
-    'footer-followers': '1k підписників',
   },
 };
 
