@@ -1,10 +1,13 @@
+/* =========================
+   ESTIMATE — MOBILE FIRST
+========================= */
+
 .estimate {
   position: relative;
   z-index: 5;
-
-  padding: 0; /* ← важно */
+  padding: 0;
   margin: 0;
-  padding-bottom: 80px; /* столько же, сколько подняли окно */
+  padding-bottom: 40px;
 }
 
 .estimate-container {
@@ -14,11 +17,15 @@
   position: relative;
 }
 
+/* =========================
+   WINDOW BASE — MOBILE
+========================= */
+
 .estimate-window {
-  width: 892px;
-  height: 398px;
+  width: 100%;
+  height: auto;
   margin: 0 auto;
-  padding: 40px;
+  padding: 24px 16px;
   background: #fff;
   border-radius: 8px;
   box-shadow:
@@ -29,29 +36,41 @@
   color: #36162e;
   display: none;
   position: relative;
-  transform: translateY(-100px); /* ← наезжаем на hero */
+  transform: translateY(-50px);
 }
 
 .estimate-window.active {
   display: block;
 }
 
-.step2 {
-  min-height: 492px;
+/* =========================
+   H2 BASE
+========================= */
+
+h2 {
+  font-weight: 500;
+  font-size: 22px;
+  margin-bottom: 20px;
 }
 
-/* Прогресс-бар */
+.highlight {
+  color: #ff6d3f;
+}
+
+/* =========================
+   PROGRESS BAR — STEP 1
+========================= */
+
 .progress-bar {
   display: flex;
   align-items: center;
-  gap: 16px;
-  margin-bottom: 32px;
-  max-width: 786px;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
 .progress-text {
   font-weight: 500;
-  font-size: 17px;
+  font-size: 13px;
   text-transform: uppercase;
   color: #aca0ab;
   white-space: nowrap;
@@ -59,49 +78,32 @@
 
 .progress-line {
   flex: 1;
-  /*height: 4px;*/
   display: flex;
 }
 
-.progress-active,
-.progress-inactive {
-  height: 100%;
-}
-
 .progress-active {
-  /*background: #aca0ab;*/
-
-  border-right: none;
   border: 2px solid #aca0ab;
-  width: 157px;
+  border-right: none;
+  width: 80px;
   height: 0px;
 }
 
 .progress-inactive {
   flex: 1;
-  /*background: #eaeaea;*/
   border: 2px solid #eaeaea;
-  width: 480px;
-  height: 0px;
   border-left: none;
+  height: 0px;
 }
 
-/* Заголовок */
-h2 {
-  font-weight: 500;
-  font-size: 34px;
-  margin-bottom: 32px;
-}
+/* =========================
+   FORM — STEP 1
+========================= */
 
-.highlight {
-  color: #ff6d3f;
-}
-
-/* Форма */
 .form-row {
   display: flex;
-  gap: 24px;
-  margin-bottom: 32px;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
 }
 
 .form-group {
@@ -112,56 +114,57 @@ h2 {
   display: block;
   margin-bottom: 8px;
   font-weight: 300;
-  font-size: 16px;
+  font-size: 14px;
   color: #594057;
-  max-width: 264px;
+  max-width: 100%;
 }
+
 .input-radio {
   display: block;
   margin-bottom: 8px;
   font-weight: 300;
-  font-size: 16px;
+  font-size: 14px;
   color: #594057;
 }
 
 input {
-  max-width: 264px;
-  height: 56px;
-  padding: 14px 26px 15px;
+  width: 100%;
+  max-width: 100%;
+  height: 48px;
+  padding: 12px 16px;
   border: 1px solid #ececec;
   border-radius: 4px;
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.08);
-  font-size: 18px;
+  font-size: 16px;
   color: #594057;
+  box-sizing: border-box;
 }
 
-/* Радиокнопки */
+/* =========================
+   RADIO GROUP
+========================= */
+
 .radio-group {
   display: flex;
   gap: 8px;
-  max-width: 284px;
+  max-width: 100%;
 }
 
 .radio-label {
   flex: 1;
-  height: 56px;
-
+  height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
-
   border: 1px solid #ececec;
   border-radius: 4px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   background: #fff;
-
   cursor: pointer;
-
   font-family: 'Poppins', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   color: #594057;
-
   transition:
     border-color 0.2s,
     color 0.2s;
@@ -170,34 +173,29 @@ input {
 .radio-label input {
   display: none;
 }
-
 .radio-label span {
   pointer-events: none;
 }
 
-/* CHECKED */
 .radio-label input:checked + span {
   color: #ff6d3f;
 }
-
-.radio-label input:checked {
-  /* ничего */
-}
-
 .radio-label:has(input:checked) {
   border-color: #ff6d3f;
 }
 
-/* Кнопка NEXT */
+/* =========================
+   NEXT BTN
+========================= */
+
 .next-btn {
-  padding: 20px 26px 23px;
-  width: 222px;
-  height: 75px;
+  width: 100%;
+  height: 60px;
   background: #ff6d3f;
   border: none;
   border-radius: 4px;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 15px;
   text-transform: uppercase;
   color: #fff;
   box-shadow:
@@ -214,372 +212,106 @@ input {
   background: #e55c35;
 }
 
-/* Бейджик */
+/* =========================
+   BADGE
+========================= */
+
 .estimate-badge {
-  position: absolute;
-
-  right: -100px;
-  width: 290px;
-  height: 555px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  top: 32px;
-  transform: rotate(-4deg);
-  pointer-events: none;
-}
-
-.badge-bg {
-  position: absolute;
-  inset: 0;
-  fill: #feff89;
-
-  width: 100%;
-  height: 100%;
-}
-.badge-bg path {
-  fill: #feff89;
-}
-.badge-inner {
-  position: relative;
-  z-index: 2;
-
-  width: 240px; /* ← КЛЮЧ */
-  transform: rotate(-10deg); /* компенсация наклона */
-
-  display: flex;
-  justify-content: center;
-}
-.badge-desc {
-  display: block;
-  max-width: 220px;
-  width: 100%;
-  text-align: center;
-
-  font-family: 'Poppins', sans-serif;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 1.35;
-
-  color: #906f2f;
-
-  white-space: normal; /* важно */
-  word-break: normal; /* не даём ломать слова */
-}
-.no-pressure {
-  text-align: center;
-  color: #9d8e9a;
-  margin-top: 16px;
-}
-
-.trust-badges {
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-  margin: 32px 0;
-}
-
-.trust-badges img {
-  height: 40px;
-}
-
-/* STEP 2*/
-/* =========================
-   STEP 2 BASE
-========================= */
-
-.step2 {
-  min-height: 492px;
+  display: none; /* скрываем на мобилке */
 }
 
 /* =========================
-   PROGRESS
-========================= */
-
-.estimate-progress {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  margin-bottom: 32px;
-}
-
-.progress-step {
-  font-size: 15px;
-  font-weight: 500;
-  color: #aca0ab;
-  white-space: nowrap;
-}
-
-.progress-track {
-  display: flex;
-  align-items: center;
-  gap: 32px;
-  flex: 1;
-}
-
-.progress-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.progress-circle {
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  border: 2px solid #d6d0d5;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.progress-item.done .progress-circle {
-  background: #a0cc4b;
-  border-color: #a0cc4b;
-}
-
-.progress-check {
-  width: 14px;
-  height: 14px;
-  stroke: #fff;
-  fill: none;
-}
-
-.progress-label {
-  font-size: 14px;
-  color: #aca0ab;
-}
-
-.progress-label.active {
-  color: #a0cc4b;
-  font-weight: 600;
-}
-
-/* =========================
-   TITLES
-========================= */
-
-.estimate-title {
-  font-size: 28px;
-  font-weight: 500;
-  margin-bottom: 24px;
-}
-
-.estimate-subtitle {
-  font-size: 20px;
-  font-weight: 400;
-  margin: 32px 0 16px;
-}
-
-/* =========================
-   RADIO GROUPS
-========================= */
-
-.radio-group {
-  display: flex;
-  gap: 12px;
-}
-
-.radio-large .radio-card {
-  flex: 1;
-  height: 56px;
-}
-
-.radio-small {
-  gap: 16px;
-}
-
-/* =========================
-   RADIO CARD (AGE)
-========================= */
-
-.radio-card {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border: 1px solid #ececec;
-  border-radius: 4px;
-  background: #fff;
-
-  font-size: 16px;
-  color: #594057;
-  cursor: pointer;
-
-  transition:
-    border-color 0.2s,
-    color 0.2s;
-}
-
-.radio-card input {
-  display: none;
-}
-
-.radio-card span {
-  pointer-events: none;
-}
-
-.radio-card:has(input:checked) {
-  border-color: #ff6d3f;
-  color: #ff6d3f;
-}
-
-/* =========================
-   RADIO PILL (YES / NO)
-========================= */
-
-.radio-pill {
-  width: 96px;
-  height: 48px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 6px;
-  border: 1px solid #ececec;
-  background: #fff;
-
-  font-size: 16px;
-  color: #594057;
-  cursor: pointer;
-
-  transition:
-    background 0.2s,
-    color 0.2s;
-}
-
-.radio-pill input {
-  display: none;
-}
-
-.radio-pill span {
-  pointer-events: none;
-}
-
-.radio-pill:has(input:checked) {
-  background: #ff6d3f;
-  color: #fff;
-  border-color: #ff6d3f;
-}
-/* =========================
-   STEP 2 WRAPPER
+   STEP 2 — BASE MOBILE
 ========================= */
 
 .estimate-step2 {
-  min-height: 492px;
+  min-height: auto;
 }
-
-/* =========================
-   PROGRESS
-========================= */
 
 .step2-progress {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin: 30px 0;
+  gap: 8px;
+  margin: 16px 0 20px;
 }
 
 .step2-progress-text {
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 500;
   color: #aca0ab;
   white-space: nowrap;
 }
 
-/* BAR */
-
 .step2-progress-bar {
   position: relative;
-  width: 680px; /* ← фикс длины */
+  flex: 1;
   height: 32px;
   display: flex;
   align-items: center;
 }
-
-/* LINE */
 
 .step2-progress-line {
   position: absolute;
   top: 50%;
   left: 0;
   width: 100%;
-  /*height: 2px;*/
-
   transform: translateY(-50%);
   z-index: 1;
   border: 2px solid #eaeaea;
-  width: 680px;
   height: 0px;
 }
+
 .step2-progress-line::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
-
-  width: 160px; /* ← до первой точки */
-  /*height: 100%;*/
+  width: 33%;
   border: 2px solid #a0cc4b;
   height: 0px;
 }
-
-/* POINT */
 
 .step2-progress-point {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   z-index: 2;
-  left: 160px;
-  width: 22px;
-  height: 22px;
+  left: 33%;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
-
-  background: #d6d0d5; /* ← СЕРЫЙ КРУЖОК */
+  background: #d6d0d5;
   border: 2px solid #d6d0d5;
-
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .step2-progress-point:nth-of-type(2) {
-  left: 320px;
+  left: 60%;
 }
-
 .step2-progress-point:nth-of-type(3) {
-  left: 480px;
+  left: 87%;
 }
 
-/* .step2-progress-point:nth-of-type(4) {
-  left: 320px;
-} */
 .step2-progress-point.done {
   background: #a0cc4b;
   border-color: #a0cc4b;
 }
 
-/* CHECK */
-
 .step2-check {
-  width: 12px;
-  height: 12px;
-  stroke: #fff; /* ← БЕЛАЯ ВЕЗДЕ */
+  width: 10px;
+  height: 10px;
+  stroke: #fff;
   fill: none;
 }
-.step2-progress-point.done .step2-check {
-  display: block;
-}
-
-/* LABEL */
 
 .step2-label {
   position: absolute;
-  top: 32px;
+  top: 26px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 14px;
+  font-size: 11px;
   white-space: nowrap;
   color: #aca0ab;
 }
@@ -587,53 +319,41 @@ input {
 .step2-label.active {
   color: #a0cc4b;
   font-weight: 600;
-  margin-bottom: 30px;
 }
-
-/* =========================
-   TITLES
-========================= */
 
 .step2-title {
   font-weight: 300;
-  font-size: 16px;
+  font-size: 14px;
   color: #594057;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
 .step2-subtitle {
   font-weight: 300;
-  font-size: 16px;
+  font-size: 14px;
   color: #594057;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
-
-/* =========================
-   RADIO CARDS
-========================= */
 
 .step2-radio-group {
   display: flex;
-  gap: 12px;
-  margin-bottom: 30px;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
 }
 
 .step2-radio-card {
-  flex: 1;
-  height: 56px;
-
+  width: 100%;
+  height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
-
   border: 1px solid #ececec;
   border-radius: 4px;
   background: #fff;
-
-  font-size: 16px;
+  font-size: 15px;
   color: #594057;
   cursor: pointer;
-
   transition:
     border-color 0.2s,
     color 0.2s;
@@ -642,38 +362,29 @@ input {
 .step2-radio-card input {
   display: none;
 }
-
 .step2-radio-card:has(input:checked) {
   border-color: #ff6d3f;
   color: #ff6d3f;
 }
 
-/* =========================
-   YES / NO
-========================= */
-
 .step2-radio-pills {
   display: flex;
-  gap: 16px;
-  margin-bottom: 30px;
+  gap: 12px;
+  margin-bottom: 20px;
 }
 
 .step2-pill {
-  width: 96px;
-  height: 48px;
-
+  width: 80px;
+  height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
-
   border-radius: 6px;
   border: 1px solid #ececec;
   background: #fff;
-
-  font-size: 16px;
+  font-size: 15px;
   color: #594057;
   cursor: pointer;
-
   transition:
     background 0.2s,
     color 0.2s;
@@ -682,34 +393,30 @@ input {
 .step2-pill input {
   display: none;
 }
-
 .step2-pill:has(input:checked) {
   background: #ff6d3f;
   color: #fff;
   border-color: #ff6d3f;
 }
+
 /* =========================
-   STEP 3 BASE
+   STEP 3 — BASE MOBILE
 ========================= */
 
 .estimate-step3 {
-  min-height: 736px;
+  min-height: auto;
 }
-
-/* =========================
-   PROGRESS
-========================= */
 
 .step3-progress {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-top: 18px;
-  margin-bottom: 28px;
+  gap: 8px;
+  margin-top: 16px;
+  margin-bottom: 20px;
 }
 
 .step3-progress-text {
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 500;
   color: #aca0ab;
   white-space: nowrap;
@@ -717,7 +424,7 @@ input {
 
 .step3-progress-bar {
   position: relative;
-  width: 680px;
+  flex: 1;
   height: 32px;
 }
 
@@ -737,38 +444,33 @@ input {
   position: absolute;
   top: 0;
   left: 0;
-  width: 335px; /* ← до второй точки */
+  width: 60%;
   height: 100%;
   background: #a0cc4b;
   border: 2px solid #a0cc4b;
 }
 
-/* POINTS */
-
 .step3-progress-point {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   background: #d6d0d5;
   border: 2px solid #d6d0d5;
   display: flex;
   align-items: center;
   justify-content: center;
-  left: 160px;
+  left: 33%;
 }
 
 .step3-progress-point:nth-of-type(2) {
-  left: 320px;
+  left: 60%;
 }
 .step3-progress-point:nth-of-type(3) {
-  left: 480px;
+  left: 87%;
 }
-/* .step3-progress-point:nth-of-type(4) {
-  left: 480px;
-} */
 
 .step3-progress-point.done {
   background: #a0cc4b;
@@ -776,20 +478,18 @@ input {
 }
 
 .step3-check {
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   stroke: #fff;
   fill: none;
 }
 
-/* LABELS */
-
 .step3-span {
   position: absolute;
-  top: 32px;
+  top: 26px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 14px;
+  font-size: 11px;
   white-space: nowrap;
   color: #aca0ab;
 }
@@ -799,25 +499,17 @@ input {
   font-weight: 600;
 }
 
-/* =========================
-   TITLE
-========================= */
-
 .step3-title {
-  font-size: 34px;
+  font-size: 22px;
   font-weight: 500;
   color: #36162e;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
-
-/* =========================
-   FORM
-========================= */
 
 .step3-form {
   display: flex;
   flex-direction: column;
-  gap: 46px; /* ← между инпутами */
+  gap: 20px;
 }
 
 .step3-group {
@@ -827,22 +519,22 @@ input {
 
 .step3-label {
   margin-bottom: 5px;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 300;
   color: #594057;
 }
 
 .step3-input {
-  height: 56px;
-  padding: 14px 26px 15px;
+  width: 100%;
+  height: 48px;
+  padding: 12px 16px;
   border-radius: 4px;
   border: 1px solid #ececec;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  font-size: 18px;
+  font-size: 16px;
   color: #594057;
+  box-sizing: border-box;
 }
-
-/* states */
 
 .step3-input--accent {
   border: 1px solid #ff6d3f;
@@ -851,41 +543,37 @@ input {
 
 .step3-input--secondary {
   border: 1px solid #be99aa;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
-
-/* placeholder */
 
 .step3-input::placeholder {
   font-weight: 500;
-  font-size: 18px;
+  font-size: 16px;
   color: #594057;
   opacity: 0.5;
 }
 
-/* =========================
-   BRANDS
-========================= */
-
 .step3-brands {
-  width: 445px;
-  height: 69px;
+  width: 100%;
+  max-width: 340px;
+  height: auto;
   display: block;
   margin: 16px 0;
 }
-.estimate-step4 {
-  min-height: 428px;
-}
+
+/* =========================
+   STEP 4 — THANK YOU
+========================= */
 
 .thank-you {
-  padding: 60px 60px;
-  min-height: 428px;
+  padding: 40px 20px;
+  min-height: auto;
+  text-align: center;
 }
 
 .close-btn {
   position: absolute;
-  top: 30px;
-  right: 30px;
+  top: 20px;
+  right: 20px;
   background: none;
   border: none;
   cursor: pointer;
@@ -893,12 +581,10 @@ input {
   width: 16px;
   height: 16px;
   fill: #36162e;
-  font-size: 32px;
-  font-weight: 300;
-  color: #36162e;
   transition: color 0.3s;
   z-index: 10;
 }
+
 .close-btn:hover {
   color: #ff6d3f;
 }
@@ -911,40 +597,383 @@ input {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 18px;
+  margin: 0 auto 16px;
 }
+
 .step4-title {
   font-weight: 500;
-  font-size: 34px;
+  font-size: 24px;
   color: #36162e;
-  text-align: start;
+  margin-bottom: 12px;
 }
+
 .step4-desc {
   font-weight: 300;
-  font-size: 18px;
+  font-size: 16px;
   color: #594057;
-  margin-bottom: 18px;
+  margin-bottom: 12px;
 }
+
 .step4-text {
   font-weight: 300;
-  font-size: 18px;
+  font-size: 16px;
   color: #594057;
-  text-align: start;
 }
+
 .phone {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 700;
   color: #ff6d3f;
-  margin: 24px 0;
-  text-align: start;
+  margin: 16px 0;
 }
+
 .note {
   font-weight: 300;
-  font-size: 18px;
+  font-size: 16px;
   color: #594057;
-  text-align: start;
 }
-.thank-you {
+
+/* =========================
+   550px
+========================= */
+
+@media (min-width: 550px) {
+  .estimate-window {
+    padding: 28px 24px;
+    transform: translateY(-60px);
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  .form-row {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  input {
+    height: 52px;
+    font-size: 17px;
+  }
+
+  .radio-label {
+    height: 52px;
+    font-size: 17px;
+  }
+
+  .next-btn {
+    width: 200px;
+    height: 64px;
+  }
+
+  .step2-radio-group {
+    flex-direction: row;
+  }
+
+  .estimate-badge {
+    display: flex;
+    position: absolute;
+    right: -60px;
+    top: 20px;
+    width: 200px;
+    height: 380px;
+    transform: rotate(-4deg);
+    pointer-events: none;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* =========================
+   768px
+========================= */
+
+@media (min-width: 768px) {
+  .estimate {
+    padding-bottom: 60px;
+  }
+
+  .estimate-window {
+    width: 90%;
+    padding: 36px 32px;
+    transform: translateY(-80px);
+  }
+
+  h2 {
+    font-size: 30px;
+    margin-bottom: 28px;
+  }
+
+  input {
+    height: 56px;
+    font-size: 18px;
+  }
+  .radio-label {
+    height: 56px;
+    font-size: 18px;
+  }
+
+  .next-btn {
+    width: 222px;
+    height: 70px;
+    font-size: 16px;
+  }
+
+  .progress-text {
+    font-size: 15px;
+  }
+  .step2-progress-text {
+    font-size: 14px;
+  }
+  .step3-progress-text {
+    font-size: 14px;
+  }
+
+  .step2-label {
+    font-size: 13px;
+  }
+  .step3-span {
+    font-size: 13px;
+  }
+
+  .step3-title {
+    font-size: 28px;
+  }
+  .step3-form {
+    gap: 32px;
+  }
+  .step3-brands {
+    max-width: 445px;
+  }
+
+  .step4-title {
+    font-size: 30px;
+  }
+  .phone {
+    font-size: 28px;
+  }
+
+  .estimate-badge {
+    right: -80px;
+    width: 240px;
+    height: 460px;
+  }
+}
+
+/* =========================
+   DESKTOP 1175px
+========================= */
+
+@media (min-width: 1175px) {
+  .estimate {
+    padding-bottom: 80px;
+  }
+
+  .estimate-window {
+    width: 892px;
+    height: 398px;
+    padding: 40px;
+    transform: translateY(-100px);
+  }
+
+  .estimate-step2 {
+    min-height: 492px;
+    height: auto;
+  }
+  .estimate-step3 {
+    min-height: 736px;
+    height: auto;
+  }
+  .thank-you {
+    min-height: 428px;
+    height: auto;
+    padding: 60px;
+  }
+
+  h2 {
+    font-size: 34px;
+    margin-bottom: 32px;
+  }
+
+  .progress-text {
+    font-size: 17px;
+  }
+  .progress-active {
+    width: 157px;
+  }
+
+  input {
+    max-width: 264px;
+    height: 56px;
+    font-size: 18px;
+    padding: 14px 26px 15px;
+  }
+
+  .form-row {
+    gap: 24px;
+    margin-bottom: 32px;
+  }
+  .radio-group {
+    max-width: 284px;
+  }
+  .radio-label {
+    height: 56px;
+    font-size: 18px;
+  }
+
+  .next-btn {
+    width: 222px;
+    height: 75px;
+    padding: 20px 26px 23px;
+  }
+
+  .estimate-badge {
+    right: -100px;
+    width: 290px;
+    height: 555px;
+    top: 32px;
+  }
+
+  /* Step 2 progress — фиксированные позиции */
+  .step2-progress-bar {
+    width: 680px;
+    flex: none;
+  }
+  .step2-progress-line {
+    width: 680px;
+  }
+  .step2-progress-line::before {
+    width: 160px;
+  }
+  .step2-progress-point {
+    left: 160px;
+    width: 22px;
+    height: 22px;
+  }
+  .step2-progress-point:nth-of-type(2) {
+    left: 320px;
+  }
+  .step2-progress-point:nth-of-type(3) {
+    left: 480px;
+  }
+  .step2-check {
+    width: 12px;
+    height: 12px;
+  }
+  .step2-label {
+    font-size: 14px;
+    top: 32px;
+  }
+  .step2-radio-group {
+    gap: 12px;
+  }
+  .step2-radio-card {
+    height: 56px;
+    font-size: 16px;
+  }
+  .step2-pill {
+    width: 96px;
+    height: 48px;
+  }
+
+  /* Step 3 progress */
+  .step3-progress-bar {
+    width: 680px;
+    flex: none;
+  }
+  .step3-progress-line::before {
+    width: 335px;
+  }
+  .step3-progress-point {
+    left: 160px;
+    width: 22px;
+    height: 22px;
+  }
+  .step3-progress-point:nth-of-type(2) {
+    left: 320px;
+  }
+  .step3-progress-point:nth-of-type(3) {
+    left: 480px;
+  }
+  .step3-check {
+    width: 12px;
+    height: 12px;
+  }
+  .step3-span {
+    font-size: 14px;
+    top: 32px;
+  }
+  .step3-title {
+    font-size: 34px;
+    margin-bottom: 24px;
+  }
+  .step3-form {
+    gap: 46px;
+  }
+  .step3-input {
+    height: 56px;
+    padding: 14px 26px 15px;
+    font-size: 18px;
+  }
+  .step3-brands {
+    width: 445px;
+    height: 69px;
+  }
+
+  .step4-title {
+    font-size: 34px;
+  }
+  .step4-desc {
+    font-size: 18px;
+  }
+  .step4-text {
+    font-size: 18px;
+  }
+  .phone {
+    font-size: 28px;
+    margin: 24px 0;
+  }
+  .note {
+    font-size: 18px;
+  }
+}
+
+/* =========================
+   BADGE INNER (все размеры)
+========================= */
+
+.badge-bg {
+  position: absolute;
+  inset: 0;
+  fill: #feff89;
+  width: 100%;
+  height: 100%;
+}
+
+.badge-bg path {
+  fill: #feff89;
+}
+
+.badge-inner {
+  position: relative;
+  z-index: 2;
+  width: 240px;
+  transform: rotate(-10deg);
+  display: flex;
+  justify-content: center;
+}
+
+.badge-desc {
+  display: block;
+  max-width: 220px;
+  width: 100%;
   text-align: center;
-  padding: 60px 20px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.35;
+  color: #906f2f;
+  white-space: normal;
+  word-break: normal;
 }

@@ -1,29 +1,28 @@
 .geo-backdrop {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   background: rgba(54, 22, 46, 0.55);
   z-index: 9999;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.geo-backdrop:not(.hidden) {
-  opacity: 1;
-  visibility: visible;
+.geo-backdrop.hidden {
+  display: none;
 }
 
 .geo-modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  background: #fff url('../img/area-modal/canada-modal-1x.webp') no-repeat right
+    center / 55%;
+
+  position: relative;
+  top: auto;
+  left: auto;
+  transform: none;
   width: 90%;
   max-width: 480px;
-  background: #fff;
+
   padding: 40px 24px 48px;
   border-radius: 12px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
@@ -31,8 +30,13 @@
   overflow-y: auto;
   z-index: 10000;
 }
+@media (min-resolution: 192dpi) {
+  .geo-modal {
+    background: #fff url('../img/area-modal/canada-modal-2x.webp') no-repeat
+      right center / 55%;
+  }
+}
 
-/* Декоративная рамка */
 .geo-modal::before {
   content: '';
   position: absolute;
@@ -42,7 +46,6 @@
   border-radius: 10px;
 }
 
-/* Крестик */
 .geo-close {
   position: absolute;
   top: 16px;
@@ -62,7 +65,6 @@
   fill: #36162e;
 }
 
-/* Заголовок и текст */
 .geo-header {
   display: flex;
   align-items: center;
@@ -85,11 +87,19 @@
   margin: 0;
 }
 
-/* Адаптив */
 @media (min-width: 768px) {
   .geo-modal {
+    background: #fff url('../img/area-modal/canada-modal-1x.webp') no-repeat
+      right center / 55%;
+
     max-width: 540px;
     padding: 48px 32px 56px;
+  }
+  @media (min-resolution: 192dpi) {
+    .geo-modal {
+      background: #fff url('../img/area-modal/canada-modal-2x.webp') no-repeat
+        right center / 55%;
+    }
   }
 
   .geo-header h3 {
@@ -103,8 +113,17 @@
 
 @media (min-width: 1175px) {
   .geo-modal {
+    background: #fff url('../img/area-modal/canada-modal-1x.webp') no-repeat
+      right center / 55%;
+
     max-width: 600px;
     padding: 56px 40px 64px;
+  }
+  @media (min-resolution: 192dpi) {
+    .geo-modal {
+      background: #fff url('../img/area-modal/canada-modal-2x.webp') no-repeat
+        right center / 55%;
+    }
   }
 
   .geo-header h3 {

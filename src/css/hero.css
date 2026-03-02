@@ -10,8 +10,8 @@
 
   background-image:
     linear-gradient(90deg, #c4c4c4 0%, rgba(196, 196, 196, 0) 100%),
-    /* ← свет слева */ url('../img/hero/hero-mobile-1x.webp'),
-    /* яркая картинка */ url('../img/hero/hero-background-mobile-1x.webp'); /* слабое серое */
+    url('../img/hero/hero-mobile-1x.webp'),
+    url('../img/hero/hero-background-mobile-1x.webp'); /* слабое серое */
 
   background-repeat: no-repeat;
   background-position: center;
@@ -102,7 +102,7 @@
   .hero {
     background-image:
       linear-gradient(90deg, #c4c4c4 0%, rgba(196, 196, 196, 0) 100%),
-      /* свет слева */ url('../img/hero/hero-tablet-1x.webp'),
+      url('../img/hero/hero-tablet-1x.webp'),
       url('../img/hero/hero-background-tablet-1x.webp');
   }
 

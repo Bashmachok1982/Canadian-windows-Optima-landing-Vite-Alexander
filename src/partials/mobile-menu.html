@@ -1,22 +1,29 @@
-<div class="mobile-menu is-hidden" id="mobile-menu">
+<!-- MOBILE MENU -->
+<div class="mobile-menu-backdrop" id="mobile-backdrop"></div>
+<div class="mobile-menu" id="mobile-menu">
   <div class="mobile-menu-inner">
     <button class="mobile-close">
-      <svg class="mobile-close-btn" width="8" height="8" aria-hidden="true">
+      <svg class="mobile-close-btn" width="16" height="16" aria-hidden="true">
         <use href="./img/sprite.svg#icon-close-btn"></use>
       </svg>
     </button>
 
     <nav class="mobile-nav">
       <ul>
-        <li><a href="#Why">Why replace</a></li>
-        <li><a href="#advantage">Our Advantage</a></li>
-        <li><a href="#technologies">Technologies</a></li>
-        <li><a href="#contacts">Contacts</a></li>
+        <li><a href="#Why" data-i18n="nav-why">Why replace</a></li>
+        <li>
+          <a href="#advantage" data-i18n="nav-advantage">Our Advantage</a>
+        </li>
+        <li>
+          <a href="#technologies" data-i18n="nav-technologies">Technologies</a>
+        </li>
+        <li><a href="#contacts" data-i18n="nav-contacts">Contacts</a></li>
       </ul>
     </nav>
 
-    <a href="tel:6479522191" class="mobile-phone"> (647) 952-2191 </a>
-
-    <button class="btn mobile-call">Call me</button>
+    <a href="tel:6479522191" class="mobile-phone">(647) 952-2191</a>
+    <a href="tel:6479522191" class="mobile-call" data-i18n="mobile-call"
+      >Call me</a
+    >
   </div>
 </div>

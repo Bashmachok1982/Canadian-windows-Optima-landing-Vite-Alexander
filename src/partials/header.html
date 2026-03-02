@@ -1,3 +1,4 @@
+<!-- HEADER -->
 <header class="header">
   <div class="container header-container">
     <!-- LOGO -->
@@ -10,36 +11,43 @@
       />
     </a>
 
-    <!-- NAV (desktop only) -->
+    <!-- NAV -->
     <nav class="nav desktop-nav">
       <ul class="nav-list">
-        <li><a href="#Why">Why replace</a></li>
-        <li><a href="#advantage">Our Advantage</a></li>
-        <li><a href="#technologies">Technologies</a></li>
-        <li><a href="#contacts">Contacts</a></li>
+        <li><a href="#Why" data-i18n="nav-why">Why replace</a></li>
+        <li>
+          <a href="#advantage" data-i18n="nav-advantage">Our Advantage</a>
+        </li>
+        <li>
+          <a href="#technologies" data-i18n="nav-technologies">Technologies</a>
+        </li>
+        <li><a href="#contacts" data-i18n="nav-contacts">Contacts</a></li>
       </ul>
     </nav>
 
     <!-- ACTIONS -->
     <div class="header-actions">
-      <!-- PHONE (мобильный + планшет: только иконка, без номера) -->
+      <!-- ПЕРЕКЛЮЧАТЕЛЬ ЯЗЫКОВ -->
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="ru">RU</button>
+        <button class="lang-btn" data-lang="ua">UA</button>
+      </div>
+
       <a href="tel:6479522191" class="phone">
         <svg class="phone-icon" width="32" height="32" aria-hidden="true">
           <use href="./img/sprite.svg#icon-canada"></use>
         </svg>
-        <!-- Номер скрыт везде (по твоему требованию) -->
         <span class="phone-text">(647) 952-2191</span>
       </a>
 
-      <!-- CALL ME (появляется на планшете) -->
       <button class="call-btn">
         <svg class="call-icon" width="18" height="18" aria-hidden="true">
           <use href="./img/sprite.svg#icon-Phone"></use>
         </svg>
-        <span>Call me</span>
+        <span data-i18n="header-call">Call me</span>
       </button>
 
-      <!-- BURGER -->
       <button class="burger-btn" aria-label="Open menu">
         <svg
           class="burger-icon"

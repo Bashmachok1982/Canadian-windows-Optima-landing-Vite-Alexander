@@ -88,12 +88,13 @@
   z-index: 2;
 }
 
-.badge-bg {
+.advantage-badge-bg {
   width: 100%;
   display: block;
+  fill: #feff89;
 }
 
-.badge-text {
+.advantage-badge-text {
   position: absolute;
   inset: 0;
   display: flex;

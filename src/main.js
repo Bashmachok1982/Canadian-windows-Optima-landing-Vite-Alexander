@@ -4,8 +4,9 @@ import './js/forma.js';
 import './js/simple-lightbox-init.js';
 import './js/beter-view.js';
 import './js/estimate-form.js';
-import './js/area-modal.js';
+import './js/geo-modal.js';
 import './js/footer-social.js';
+import './js/translations.js';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';

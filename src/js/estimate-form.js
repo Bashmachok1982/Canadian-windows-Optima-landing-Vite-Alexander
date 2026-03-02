@@ -53,6 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
 
       steps[currentStep].classList.remove('active');
+      thankYou.classList.remove('hidden');
       thankYou.classList.add('active');
     });
   }
@@ -64,7 +65,8 @@ document.addEventListener('DOMContentLoaded', () => {
   if (closeBtn) {
     closeBtn.addEventListener('click', () => {
       thankYou.classList.remove('active');
-
+      thankYou.classList.add('hidden');
+      thankYou.classList.remove('active');
       steps.forEach(step => step.classList.remove('active'));
       steps[0].classList.add('active');
 

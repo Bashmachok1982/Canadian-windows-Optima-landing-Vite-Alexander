@@ -1,45 +1,54 @@
 <footer class="footer" id="contacts">
   <div class="container footer-container">
-    <!-- ================= CONTENT ================= -->
     <div class="footer-content">
       <!-- LEFT -->
       <div class="footer-left">
-        <h2 class="footer-title">
+        <h2 class="footer-title" data-i18n="footer-title">
           LEAVE THE APPLICATION,<br />
           <span>WE WILL CALL YOU</span>
         </h2>
 
-        <p class="footer-desc">
+        <p class="footer-desc" data-i18n="footer-desc">
           Patented window technology protects your home in any weather and is
           guaranteed.
         </p>
 
         <form class="footer-form" id="footerForm">
           <div class="form-group">
-            <label class="footer-label">Your phone</label>
+            <label class="footer-label" data-i18n="footer-phone-label"
+              >Your phone</label
+            >
             <input
               type="tel"
+              data-i18n-placeholder="footer-phone-placeholder"
               placeholder="Enter the phone number"
               class="footer-input"
               required
-              pattern="[0-9]{12}"      
-               />        
-    <p class="input-error">The phone number must contain exactly 12 digits,for example XX(XXX)XXXXXXXX</p>
+              pattern="[0-9]{12}"
+            />
+            <p class="input-error" data-i18n="footer-phone-error">
+              The phone number must contain exactly 12 digits, for example
+              XX(XXX)XXXXXXXX
+            </p>
           </div>
 
           <div class="form-group">
-            <label class="footer-label">Your name</label>
+            <label class="footer-label" data-i18n="footer-name-label"
+              >Your name</label
+            >
             <input
               type="text"
+              data-i18n-placeholder="footer-name-placeholder"
               placeholder="Enter your name"
               class="footer-input"
               required
-      minlength="4"
-      maxlength="64"
-      title="The name must contain 4 to 64 characters."
-      pattern="[A-Za-zА-Яа-яЇїІіЄєҐґ\s'-]+"
-               />
-               <p class="input-error">The name must contain 4 to 64 characters</p>
+              minlength="4"
+              maxlength="64"
+              pattern="[A-Za-zА-Яа-яЇїІіЄєҐґ\s'-]+"
+            />
+            <p class="input-error" data-i18n="footer-name-error">
+              The name must contain 4 to 64 characters
+            </p>
           </div>
         </form>
       </div>
@@ -54,100 +63,114 @@
             class="hand-img"
           />
 
-          <!-- PHONE SCREEN -->
           <div class="phone-screen">
             <svg class="leav-icon">
               <use href="./img/sprite.svg#icon-leav"></use>
             </svg>
-
             <div class="phone-optima">Optima</div>
             <div class="phone-number">(647) 952-2191</div>
-
-            <button class="phone-btn" type="submit" form="footerForm">CALL ME</button>
+            <button
+              class="phone-btn"
+              type="submit"
+              form="footerForm"
+              data-i18n="footer-callme"
+            >
+              CALL ME
+            </button>
           </div>
 
           <div class="phone-success hidden">
             <svg class="leav-icon">
               <use href="./img/sprite.svg#icon-leav"></use>
             </svg>
-
-  <div class="success-check">
-    <svg width="32" height="32">
-      <use href="./img/sprite.svg#icon-check"></use>
-    </svg>
-  </div>
-
-  <p class="success-text">Please <br/> expect call</p>
-</div>
+            <div class="success-check">
+              <svg width="32" height="32">
+                <use href="./img/sprite.svg#icon-check"></use>
+              </svg>
+            </div>
+            <p class="success-text" data-i18n="footer-success-text">
+              Please <br />
+              expect call
+            </p>
+          </div>
         </div>
       </div>
     </div>
 
-    <p class="footer-bottom-mobile">
-  © 2021 Optima windows and doors.All rights reserved.(647) 952-2191
-</p>
-
-
-
-    <!-- ================= SOCIAL BLOCKS ================= -->
-    <div class="footer-social-blocks">
-         
-  <!-- SLOT 1 -->
- <div class="social-slot">
-  <div class="footer-trigger">
-    <span>Follow us</span>
-  </div>
-  <a href="https://www.instagram.com/optima_windows/" 
-     target="_blank" 
-     rel="noopener noreferrer" 
-     class="social-block instagram">
-    <svg class="social-icon">
-      <use href="./img/sprite.svg#icon-instagram"></use>
-    </svg>
-    <p class="social-titile">Instagram</p>
-    <p class="social-followers">1k followers</p>
-  </a>
-</div>
-
-        <!-- SLOT 2 -->
-  <div class="social-slot">
-  <div class="footer-trigger">
-    <span>Follow us</span>
-  </div>
-  <a href="https://www.facebook.com/optima_windows/" 
-     target="_blank" 
-     rel="noopener noreferrer" 
-     class="social-block facebook is-main">
-    <h2 class="title-social">Follow us</h2>
-    <svg class="social-icon">
-      <use href="./img/sprite.svg#icon-facebook"></use>
-    </svg>
-    <p class="social-titile">Facebook</p>
-    <p class="social-followers main">1k followers</p>
-    <p class="footer-bottom">
-      © 2021 Optima windows and doors.<br />
-      All rights reserved.<br />
-      (647) 952-2191
+    <p class="footer-bottom-mobile" data-i18n="footer-copyright-mobile">
+      © 2026 Optima windows and doors. All rights reserved. (647) 952-2191
     </p>
-  </a>
-</div>
+
+    <!-- SOCIAL BLOCKS -->
+    <div class="footer-social-blocks">
+      <!-- SLOT 1 -->
+      <div class="social-slot">
+        <div class="footer-trigger">
+          <span data-i18n="footer-follow">Follow us</span>
+        </div>
+        <a
+          href="https://www.instagram.com/optima_windows/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-block instagram"
+        >
+          <svg class="social-icon">
+            <use href="./img/sprite.svg#icon-instagram"></use>
+          </svg>
+          <p class="social-titile">Instagram</p>
+          <p class="social-followers" data-i18n="footer-followers">
+            1k followers
+          </p>
+        </a>
+      </div>
+
+      <!-- SLOT 2 -->
+      <div class="social-slot">
+        <div class="footer-trigger">
+          <span data-i18n="footer-follow">Follow us</span>
+        </div>
+        <a
+          href="https://www.facebook.com/OptimaWindows/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-block facebook is-main"
+        >
+          <h2 class="title-social" data-i18n="footer-follow">Follow us</h2>
+          <svg class="social-icon">
+            <use href="./img/sprite.svg#icon-facebook"></use>
+          </svg>
+          <p class="social-titile">Facebook</p>
+          <p class="social-followers main" data-i18n="footer-followers">
+            1k followers
+          </p>
+          <p class="footer-bottom" data-i18n="footer-copyright">
+            © 2026 Optima windows and doors.<br />
+            All rights reserved.<br />
+            (647) 952-2191
+          </p>
+        </a>
+      </div>
 
       <!-- SLOT 3 -->
-  <div class="social-slot">
-  <div class="footer-trigger">
-    <span>Follow us</span>
-  </div>
-  <a href="https://www.youtube.com/@optima_windows" 
-     target="_blank" 
-     rel="noopener noreferrer" 
-     class="social-block youtube">
-    <svg class="social-icon">
-      <use href="./img/sprite.svg#icon-youTube"></use>
-    </svg>
-    <p class="social-titile">Youtube</p>
-    <p class="social-followers">1k followers</p>
-  </a>
-</div>
- 
+      <div class="social-slot">
+        <div class="footer-trigger">
+          <span data-i18n="footer-follow">Follow us</span>
+        </div>
+        <a
+          href="https://www.youtube.com/@optima_windows"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-block youtube"
+        >
+          <svg class="social-icon">
+            <use href="./img/sprite.svg#icon-youTube"></use>
+          </svg>
+          <p class="social-titile">Youtube</p>
+          <p class="social-followers" data-i18n="footer-followers">
+            1k followers
+          </p>
+        </a>
+      </div>
     </div>
+  </div>
 </footer>
