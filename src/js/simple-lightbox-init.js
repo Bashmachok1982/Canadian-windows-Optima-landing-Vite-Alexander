@@ -4,11 +4,12 @@ import 'simplelightbox/dist/simple-lightbox.min.css';
 document.addEventListener('DOMContentLoaded', () => {
   const base = import.meta.env.BASE_URL;
 
+  // сначала меняем все href
   document.querySelectorAll('.windows-list-item a').forEach(link => {
-    const file = link.getAttribute('href');
-    link.href = base + file;
+    link.href = base + link.getAttribute('href');
   });
 
+  // потом инициализируем lightbox
   new SimpleLightbox('.windows-list-item a', {
     captions: true,
     captionsData: 'alt',
