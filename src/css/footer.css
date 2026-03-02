@@ -668,6 +668,7 @@ a.social-block {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    overflow: hidden;
   }
 
   .footer-trigger span {
@@ -676,6 +677,7 @@ a.social-block {
     font-size: 14px;
     letter-spacing: 0.12em;
     opacity: 0.25;
+    white-space: nowrap;
   }
 
   /* Блок — выезжает снизу вверх через hover */
@@ -752,5 +754,9 @@ a.social-block {
     opacity: 0.5;
     font-family: 'Poppins', sans-serif;
     margin-top: 0px;
+  }
+  [data-lang='ru'] .footer-title,
+  [data-lang='ua'] .footer-title {
+    font-size: 36px;
   }
 }

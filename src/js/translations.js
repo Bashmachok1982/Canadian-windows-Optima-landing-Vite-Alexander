@@ -267,7 +267,7 @@ const translations = {
       'Один из наших менеджеров свяжется с вами для записи на <strong>БЕСПЛАТНУЮ оценку</strong>.',
     'modal-subtext':
       'Наш менеджер проекта осмотрит ваши окна и двери, обсудит потребности, покажет образцы продукции и предоставит индивидуальное предложение.',
-    'footer-title': 'ОСТАВЬТЕ ЗАЯВКУ,<br><span>МЫ ПЕРЕЗВОНИМ</span>',
+    'footer-title': 'ОСТАВЬТЕ ЗАЯВКУ,<span>МЫ ВАМ ПЕРЕЗВОНИМ</span>',
     'footer-desc':
       'Запатентованная технология окон защищает ваш дом в любую погоду и гарантирована.',
     'footer-phone-label': 'Ваш телефон',
@@ -275,7 +275,7 @@ const translations = {
     'footer-name-label': 'Ваше имя',
     'footer-name-placeholder': 'Введите ваше имя',
     'footer-callme': 'ПОЗВОНИ',
-    'footer-follow': 'ПОДПИШИСЬ',
+    'footer-follow': 'Подпись',
     'footer-followers': '1k Подписчиков',
     'footer-copyright':
       '© 2026 Optima windows and doors.<br />Все права защищены.<br />(647) 952-2191',
@@ -402,7 +402,7 @@ const translations = {
       "Один з наших менеджерів зв'яжеться з вами для запису на <strong>БЕЗКОШТОВНУ оцінку</strong>.",
     'modal-subtext':
       'Наш менеджер проекту огляне ваші вікна і двері, обговорить потреби, покаже зразки продукції та надасть індивідуальну пропозицію.',
-    'footer-title': 'ЗАЛИШТЕ ЗАЯВКУ,<br><span>МИ ПЕРЕДЗВОНИМО</span>',
+    'footer-title': 'ВІДПРАВТЕ ЗАЯВКУ,<span>МИ ВАМ ПЕРЕДЗВОНИМО</span>',
     'footer-desc':
       'Запатентована технологія вікон захищає ваш будинок за будь-якої погоди та гарантована.',
     'footer-phone-label': 'Ваш телефон',
@@ -410,7 +410,7 @@ const translations = {
     'footer-name-label': "Ваше ім'я",
     'footer-name-placeholder': "Введіть ваше ім'я",
     'footer-callme': 'ДЗВОНИ',
-    'footer-follow': 'ПІДПИШИСЬ',
+    'footer-follow': 'Підпишись',
     'footer-followers': '1k ПІдписників',
     'footer-copyright':
       '© 2026 Optima windows and doors.<br />Всі права захищені.<br />(647) 952-2191',
@@ -433,6 +433,7 @@ let currentLang = localStorage.getItem('lang') || 'en';
 function applyLang(lang) {
   currentLang = lang;
   localStorage.setItem('lang', lang);
+  document.documentElement.setAttribute('data-lang', lang);
 
   const t = translations[lang];
 
