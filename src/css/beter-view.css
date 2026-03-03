@@ -224,6 +224,8 @@
   opacity: 0;
   pointer-events: none;
   border: none;
+  left: 50%;
+  transform: translateX(-50%) translateY(0);
 }
 
 .double-arrow {
@@ -254,12 +256,23 @@
 .better-window-wrapper:hover .arrow-btn {
   opacity: 1;
   pointer-events: auto;
-  transform: translateY(-6px);
+  /* transform: translateY(-6px); */
+  transform: translateX(-50%) translateY(-6px);
+}
+@media (max-width: 419px) {
+  .window-bg::before {
+    top: 30%;
+    bottom: 32%;
+  }
+
+  .better-window-wrapper {
+    height: 360px;
+  }
 }
 @media (min-width: 420px) {
   .window-bg::before {
-    top: 24%;
-    bottom: 27%;
+    top: 28%;
+    bottom: 30%;
   }
 }
 @media (min-width: 650px) {
