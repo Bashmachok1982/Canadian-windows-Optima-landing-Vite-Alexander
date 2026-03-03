@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./src/img/preview.webp" alt="Project Preview" width="1200">
+  <img src="./src/img/Preview.webp" alt="Project Preview" width="1200">
 </p>
 # 🇨🇦 Canadian Windows Optima — Landing Page
 
